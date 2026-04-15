@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" >
 <head>
+  <script>
+  tailwind.config = {
+    darkMode: 'class',
+  }
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EvMak Payment API Documentation</title>
@@ -15,25 +20,53 @@
   <!-- Highlight.js for syntax highlighting -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<style>
+  body { 
+    font-family: 'Inter', sans-serif; 
+  }
+  pre, code { 
+    font-family: 'JetBrains Mono', monospace; 
+  }
 
-  <style>
-    body { font-family: 'Inter', sans-serif; background: #0c1118; }
-    pre, code { font-family: 'JetBrains Mono', monospace; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #2a2f36; padding: 10px; }
-    th { background:#1a1f25; text-align:left; }
-    a.active { 
-      background-color: #1f2937 !important; 
-      border-left: 4px solid #facc15 !important; 
-      color: white !important;
-    }
-    nav a:hover { background-color: #1f2937; }
-  </style>
+  /* Light mode defaults */
+  table { 
+    border-collapse: collapse; 
+    width: 100%; 
+  }
+  th, td { 
+    border: 1px solid #e2e8f0; 
+    padding: 10px; 
+  }
+  th { 
+    background: #f8fafc; 
+    text-align: left; 
+  }
+
+  /* Dark mode overrides */
+  .dark th, .dark td { 
+    border-color: #2a2f36; 
+  }
+  .dark th { 
+    background: #1a1f25; 
+  }
+
+  a.active { 
+    background-color: #1f2937 !important; 
+    border-left: 4px solid #facc15 !important; 
+    color: white !important;
+  }
+  nav a:hover { 
+    background-color: #f1f5f9; 
+  }
+  .dark nav a:hover { 
+    background-color: #1f2937; 
+  }
+</style>
 </head>
-<body class="text-gray-100">
+<body class="bg-white dark:bg-[#0c1118] text-gray-900 dark:text-gray-100 min-h-screen">
 
 
-
+<!-- 
   <script>
 // Instant authentication check – runs before anything renders
 (function () {
@@ -61,15 +94,15 @@
         return;
     }
 })();
-</script>
+</script> -->
 
 <!-- ADD THIS loading overlay just below the script above -->
-<div id="auth-check" class="fixed inset-0 bg-[#0c1118] flex items-center justify-center z-50">
+<!-- <div id="auth-check" class="fixed inset-0 bg-[#0c1118] flex items-center justify-center z-50">
     <div class="text-center">
         <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-yellow-400 mx-auto mb-4"></div>
         <p class="text-gray-300 text-lg">Verifying session...</p>
     </div>
-</div>
+</div> -->
 <div class="flex h-screen">
 
   <!-- LEFT SIDEBAR -->
@@ -169,16 +202,32 @@
     <div class="flex items-center gap-4">
       <!-- Replace with your actual logo path or use base64 -->
     
-      <h1 class="text-4xl font-bold text-blue-400">EvMak Payment API – Technical Documentation</h1>
+      <!-- <h1 class="text-1xl font-bold text-blue-400">EvMak Payment API – Technical Documentation</h1> -->
+  <p class="mt-4 text-gray-400 text-base leading-relaxed max-w-9xl">
+  This documentation is carefully designed to remain stable, responsive, and visually consistent across all devices and screen sizes. 
+  Every section is structured to prevent layout conflicts, ensuring smooth navigation, reliable rendering, and a seamless developer experience when integrating with the EvMak Payment API.
+</p>
     </div>
 
     <!-- Logout Button (aligned to the right) -->
-    <button onclick="logout()" class="flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 rounded-lg text-white font-medium transition shadow-lg">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-      </svg>
-      Logout
-    </button>
+     
+  <button onclick="toggleTheme()" 
+    class="flex items-center gap-2 px-6 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg text-gray-900 dark:text-white font-medium transition-all">
+  
+  <!-- Sun Icon - shown in Light mode -->
+  <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+
+  <!-- Moon Icon - shown in Dark mode -->
+  <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+  </svg>
+  
+  <span id="theme-text" class="text-sm font-medium">Dark Mode</span>
+</button>
   </div>
     <!-- PAYMENT REQUEST MESSAGE -->
     <section id="payment-request">
@@ -801,18 +850,49 @@ date is in the format
 </script>
 <!-- ADD THIS at the very end, just before </body> -->
 <script>
-// Remove loading screen once page is fully loaded and auth passed
-window.addEventListener("load", () => {
-    document.getElementById("auth-check")?.remove();
-});
- function logout() {
-    // Remove token (adjust the key name if different)
-    localStorage.removeItem("token"); 
-    sessionStorage.removeItem("token");
+  hljs.highlightAll();
 
-    // Redirect to login page
-    window.location.href = "login.html"; // change path if needed
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.classList.contains('dark');
+    
+    if (isDark) {
+      // Switch to Light
+      html.classList.remove('dark');
+      localStorage.theme = 'light';
+      document.getElementById('theme-text').textContent = 'Dark Mode';
+      document.getElementById('sun-icon').classList.remove('hidden');
+      document.getElementById('moon-icon').classList.add('hidden');
+    } else {
+      // Switch to Dark
+      html.classList.add('dark');
+      localStorage.theme = 'dark';
+      document.getElementById('theme-text').textContent = 'Light Mode';
+      document.getElementById('sun-icon').classList.add('hidden');
+      document.getElementById('moon-icon').classList.remove('hidden');
+    }
   }
+
+  // Initialize theme - Light mode by default
+  function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.getElementById('theme-text').textContent = 'Light Mode';
+      document.getElementById('sun-icon').classList.add('hidden');
+      document.getElementById('moon-icon').classList.remove('hidden');
+    } else {
+      // Default = Light Mode (no 'dark' class)
+      document.documentElement.classList.remove('dark');
+      document.getElementById('theme-text').textContent = 'Dark Mode';
+      document.getElementById('sun-icon').classList.remove('hidden');
+      document.getElementById('moon-icon').classList.add('hidden');
+    }
+  }
+
+  // Run when page loads
+  window.addEventListener('load', initTheme);
 </script>
 </body>
 </html>

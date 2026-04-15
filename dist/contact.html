@@ -50,6 +50,7 @@
  <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
 <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Favicon -->
     <link
@@ -81,10 +82,10 @@
       sizes="16x16"
       href="/assets/logo_very-Big-CNQULJEf.png"
     />
-    <link rel="manifest" href="/assets/site.webmanifest-Da67syPF.json" />
+    <link rel="manifest" href="/assets/site.webmanifest-i1RSfpes.json" />
     <link
       rel="mask-icon"
-      href="/assets/safari-pinned-tab-2--tc9X-.svg"
+      href="/assets/safari-pinned-tab-CD-ZJPKC.svg"
       color="#3d63dd"
     />
 
@@ -98,9 +99,9 @@
       href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     />
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
-
-    <script type="module" crossorigin src="/assets/main-D4-bJgNx.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-B2hsADk6.css">
+
+    <script type="module" crossorigin src="/assets/main-DmiGrGpb.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-S4-rFDSQ.css">
   </head>
   
  <script>
@@ -391,16 +392,16 @@
       </section>
 
       
-
 <!-- Contact section -->
 <section id="contact" class="section-area py-16">
   <div class="container">
     <div class="row gap-y-8 xl:gap-y-0 xl:items-start">
       <!-- Contact Info -->
       <div class="col-12 xl:col-4 flex flex-col gap-6">
+
         <!-- Contact -->
         <div class="scroll-revealed flex gap-4 items-center py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 hover:shadow-lg">
-          <i class="lni lni-phone w-12 h-12 flex items-center justify-center rounded-lg text-2xl bg-primary text-primary-color"></i>
+          <i class="fa-solid fa-phone w-12 h-12 flex items-center justify-center rounded-lg text-2xl bg-primary text-primary-color"></i>
           <div>
             <h4 class="text-xl text-primary mb-2">Contact</h4>
             <p class="m-0">0716400001</p>
@@ -410,7 +411,7 @@
 
         <!-- Address -->
         <div class="scroll-revealed flex gap-4 items-center py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 hover:shadow-lg">
-          <i class="lni lni-map-marker w-12 h-12 flex items-center justify-center rounded-lg text-2xl bg-primary text-primary-color"></i>
+          <i class="fa-solid fa-location-dot w-12 h-12 flex items-center justify-center rounded-lg text-2xl bg-primary text-primary-color"></i>
           <div>
             <h4 class="text-xl text-primary mb-2">Address</h4>
             <p class="m-0">Garden Avenue, Posta Mpya</p>
@@ -420,60 +421,109 @@
 
         <!-- Schedule -->
         <div class="scroll-revealed flex gap-4 items-center py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 hover:shadow-lg">
-          <i class="lni lni-alarm-clock w-12 h-12 flex items-center justify-center rounded-lg text-2xl bg-primary text-primary-color"></i>
+          <i class="fa-solid fa-clock w-12 h-12 flex items-center justify-center rounded-lg text-2xl bg-primary text-primary-color"></i>
           <div>
             <h4 class="text-xl text-primary mb-2">Schedule</h4>
             <p class="m-0">24 Hours / 7 Days Open</p>
             <p class="m-0">Office time: 10:00 AM - 5:30 PM</p>
           </div>
         </div>
+
       </div>
 
-      <!-- Contact Form -->
-      <div class="col-12 xl:col-8">
-        <div class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 shadow-card-1 hover:shadow-lg">
-          <div class="text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 text-lg font-semibold text-primary">Get in Touch</h6>
-            <h2 class="mb-3">Ready to Get Started</h2>
-            <p>Please fill our form to contact us</p>
+     <!-- Contact Form -->
+<div class="col-12 xl:col-8">
+  <div class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 shadow-card-1 hover:shadow-lg">
+    <div class="text-center max-w-[550px] mx-auto mb-12">
+      <h6 class="mb-2 text-lg font-semibold text-primary">Get in Touch</h6>
+      <h2 class="mb-3">Ready to Get Started</h2>
+      <p>Please fill our form to contact us</p>
+    </div>
+
+    <form id="contactForm" class="flex flex-col gap-6">
+      <div class="row gap-y-6">
+        <div class="col-12 md:col-6">
+          <input type="text" name="name" placeholder="Name" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
+        </div>
+
+        <div class="col-12 md:col-6">
+          <input type="email" name="email" placeholder="Email" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
+        </div>
+
+        <div class="col-12 md:col-6">
+          <input type="text" name="phone" placeholder="Phone" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
+        </div>
+
+        <div class="col-12 md:col-6">
+          <input type="text" name="subject" placeholder="Subject" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
+        </div>
+
+        <div class="col-12">
+          <textarea name="message" rows="5" placeholder="Type your message" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"></textarea>
+        </div>
+
+        <div class="col-12">
+          <div class="text-center">
+            <button type="submit"
+              class="inline-block px-6 py-3 rounded-md bg-primary text-primary-color text-base hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10">
+              Send Message
+            </button>
           </div>
+        </div>
+      </div>
+    </form>
+    <div id="formMessage" class="mt-4 text-center text-green-600"></div>
+  </div>
+</div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault(); // Prevent default form submission
 
-          <form action="#" method="POST" class="flex flex-col gap-6">
-            <div class="row gap-y-6">
-              <div class="col-12 md:col-6">
-                <input type="text" name="name" placeholder="Name" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
-              </div>
+  const form = e.target;
 
-              <div class="col-12 md:col-6">
-                <input type="email" name="email" placeholder="Email" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
-              </div>
+  // Collect values explicitly
+  const data = {
+    name: form.name.value.trim(),
+    email: form.email.value.trim(),
+    phone: form.phone.value.trim(),
+    subject: form.subject.value.trim(),
+    message: form.message.value.trim()
+  };
 
-              <div class="col-12 md:col-6">
-                <input type="text" name="phone" placeholder="Phone" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
-              </div>
+  // Simple validation
+  if (!data.name || !data.email || !data.phone || !data.subject || !data.message) {
+    document.getElementById('formMessage').textContent = "Please fill all fields.";
+    return;
+  }
 
-              <div class="col-12 md:col-6">
-                <input type="text" name="subject" placeholder="Subject" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
-              </div>
+  try {
+    const response = await fetch('http://localhost:3000/contact', { // use full backend URL
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
 
-              <div class="col-12">
-                <textarea name="message" rows="5" placeholder="Type your message" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"></textarea>
-              </div>
+    const result = await response.json();
 
-              <div class="col-12">
-                <div class="text-center">
-                  <button type="submit"
-                    class="inline-block px-6 py-3 rounded-md bg-primary text-primary-color text-base hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </div>
+    if (response.ok) {
+      document.getElementById('formMessage').textContent = result.message || "Message sent successfully!";
+      form.reset();
+    } else {
+      document.getElementById('formMessage').textContent = result.error || "Failed to send message.";
+    }
+  } catch (error) {
+    console.error("Contact form error:", error);
+    document.getElementById('formMessage').textContent = "Error sending message. Check console.";
+  }
+});
+</script>
+
+
           </form>
         </div>
       </div>
@@ -727,7 +777,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
+
     <script>
       // Scroll Reveal
       const sr = ScrollReveal({
