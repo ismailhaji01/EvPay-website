@@ -1,1847 +1,772 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Copyright" content="Inazuma" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ranyeh" />
-    <meta name="rating" content="general" />
-    <meta name="language" content="English" />
-    <meta name="application-name" content="Inazuma" />
-    <meta
-      name="description"
-      content="Tailwind CSS Company Landing Page Template by Ranyeh."
-    />
-    <meta name="keywords" content="company" />
-    <meta
-      name="twitter:title"
-      content="EvPay website"
-    />
-    <meta
-      name="twitter:description"
-      content="Tailwind CSS Company Landing Page Template by Ranyeh."
-    />
-    <meta name="twitter:image" content="./assets/img/inazuma-cover.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-     
-    <meta content="Inazuma" property="og:site_name" />
-    <meta
-      content="Tailwind CSS Company Landing Page Template by Ranyeh."
-      property="og:description"
-    />
-    <meta content="./assets/img/inazuma-cover.png" property="og:image" />
-    <meta content="https://ranyeh24.github.io/inazuma-tailwind" property="og:url" />
-    <meta content="website" property="og:type" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvPay - Payout Service</title>
 
-    <meta name="msapplication-TileColor" content="#3d63dd" />
-    <meta
-      name="msapplication-TileImage"
-      content="./assets/favicon/mstile-144x144.png"
-    />
-    <meta name="theme-color" content="#3d63dd" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Page title -->
-    <title>Evpay | Payment Gateway</title>
+    <!-- Elementor Kit Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Alfa+Slab+One&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
- <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
-<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/logo_very-Big.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/logo_very-Big.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="194x194"
-      href="./assets/favicon/logo_very-Big.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./assets/favicon/logo_very-Big.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/logo_very-Big.png"
-    />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest.json" />
-    <link
-      rel="mask-icon"
-      href="./assets/favicon/safari-pinned-tab.svg"
-      color="#3d63dd"
-    />
-
-    <!-- CSS Plugins -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-    />
-    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
-
-    <link rel="stylesheet" href="./assets/css/main.css" />
-  </head>
-  
- <script>
-  // Preload both logos as soon as possible
-  const defaultLogo = './assets/img/EvPay White.svg';
-  const scrolledLogo = './assets/img/EvPay Colored.svg';
-
-  const imgPreload1 = new Image();
-  imgPreload1.src = defaultLogo;
-  const imgPreload2 = new Image();
-  imgPreload2.src = scrolledLogo;
-
-  window.addEventListener('DOMContentLoaded', () => {
-    const logo = document.getElementById('navbar-logo');
-    if (!logo) return;
-
-    const scrollThreshold = 50; // change if you want
-
-    let isScrolled = false;
-
-    // Reusable function – no opacity fade needed anymore
-    const updateLogo = () => {
-      const shouldBeScrolled = window.scrollY > scrollThreshold;
-
-      if (shouldBeScrolled !== isScrolled) {
-        isScrolled = shouldBeScrolled;
-        logo.src = isScrolled ? scrolledLogo : defaultLogo;
-        // Optional: add a very subtle class for extra effects
-        logo.classList.toggle('scrolled', isScrolled);
-      }
-    };
-
-    // Throttle scroll for better performance
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          updateLogo();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-
-    // Initial check in case page loads already scrolled
-    updateLogo();
-  });
-</script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-  /* Completely smooth and blink-free */
-  #navbar-logo {
-    height: 46px;
-    width: auto;
-    object-fit: contain;
-    display: block;
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    html { scroll-behavior: smooth; }
 
-    /* Optional: tiny entrance fade only on page load */
-    opacity: 0;
-    animation: fadeIn 0.4s forwards;
-  }
+    body {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 400;
+        color: #000000;
+        line-height: 1.7;
+        background: #ffffff;
+    }
 
-  /* Only runs once when the page loads */
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Hanken Grotesk", sans-serif;
+        color: #000000;
+        line-height: 1.2;
+        margin: 0;
+    }
 
-  /* Optional: subtle style difference when scrolled (e.g. drop shadow) */
-  #navbar-logo.scrolled {
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-  }
+    h1 { font-weight: 700; letter-spacing: -0.5px; }
+    h2 { font-weight: 700; letter-spacing: -0.3px; }
+    h3 { font-weight: 600; }
+    h4, h5, h6 { font-weight: 600; }
+    p, li, span, a, div { color: #000000; }
+    p { margin: 0; }
+
+    /* ===== NAVBAR (NON-STICKY) ===== */
+    .nav-height { height: 92px; background: #ffffff; }
+    .nav-logo { height: 40px; width: auto; }
+
+    .desktop-menu > a {
+        font-family: "Work Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 6px 0;
+        transition: color 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: transparent;
+    }
+
+    .desktop-menu > a:hover { color: #555555; }
+
+    .lets-talk-btn {
+        font-family: "Work Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 12px 28px;
+        border: 2px solid #1f1f1f;
+        border-radius: 999px;
+        background: transparent;
+        color: #1f1f1f;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .lets-talk-btn:hover {
+        background: #1f1f1f;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Hamburger */
+    .hamburger {
+        width: 40px; height: 40px;
+        display: flex; align-items: center; justify-content: center;
+        cursor: pointer;
+        font-size: 22px;
+        color: #1f1f1f;
+        background: transparent;
+        border: none;
+    }
+
+    /* ===== DRAWER ===== */
+    .drawer {
+        position: fixed;
+        top: 0; left: 0;
+        width: 320px;
+        max-width: 85vw;
+        height: 100%;
+        background: #ffffff;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 0 40px rgba(0,0,0,0.15);
+    }
+
+    .drawer.active { transform: translateX(0); }
+
+    .drawer-identity {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 24px;
+        border-bottom: 1px solid #eef0f3;
+    }
+
+    .drawer-identity img { height: 32px; width: auto; }
+
+    .drawer-close {
+        width: 36px; height: 36px;
+        display: flex; align-items: center; justify-content: center;
+        background: #f5f6f7;
+        border: none;
+        border-radius: 50%;
+        font-size: 16px;
+        color: #1f1f1f;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .drawer-close:hover {
+        background: #000000;
+        color: #ffffff;
+        transform: rotate(90deg);
+    }
+
+    .drawer-nav { flex: 1; padding: 10px 0; overflow-y: auto; }
+
+    .drawer-nav a {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #1f1f1f;
+        font-size: 14px;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #f0f2f5;
+        transition: all 0.25s ease;
+    }
+
+    .drawer-nav a:hover {
+        background: #f7f8fa;
+        color: #000000;
+        padding-left: 30px;
+    }
+
+    .drawer-nav a i { font-size: 11px; opacity: 0.5; }
+
+    .drawer-footer {
+        padding: 24px;
+        border-top: 1px solid #eef0f3;
+    }
+
+    .drawer-footer .lets-talk-btn { width: 100%; }
+
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.55);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+        z-index: 998;
+    }
+
+    .overlay.active { opacity: 1; visibility: visible; }
+    body.drawer-open { overflow: hidden; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translate3d(0, -30px, 0); }
+        to   { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translate3d(0, 40px, 0); }
+        to   { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+    @keyframes fadeInLeft {
+        from { opacity: 0; transform: translate3d(-40px, 0, 0); }
+        to   { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+
+    .animate-fadeInDown { animation: fadeInDown 1s ease both; }
+
+    .wow { opacity: 0; visibility: hidden; }
+    .wow.visible { animation: fadeInUp 1.2s ease both; visibility: visible; }
+    .wow-left.visible { animation: fadeInLeft 1.2s ease both; visibility: visible; }
+    .wow-delay-200.visible { animation-delay: 0.2s; }
+    .wow-delay-400.visible { animation-delay: 0.4s; }
+    .wow-delay-600.visible { animation-delay: 0.6s; }
+
+    /* ===== HERO ===== */
+    .hero-title {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -1px;
+        color: #ffffff;
+    }
+
+    .hero-subtext {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #ffffff;
+    }
+
+    /* ===== SECTION HEADINGS / BODY ===== */
+    .section-heading {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 700;
+        color: #000000;
+        line-height: 1.2;
+        letter-spacing: -0.3px;
+    }
+
+    .section-subheading {
+        font-family: "Hanken Grotesk", sans-serif;
+        color: #000000;
+        font-size: 16px;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+
+    .body-list {
+        font-family: "Hanken Grotesk", sans-serif;
+        color: #000000;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* ===== BUTTONS ===== */
+    .elementor-btn {
+        font-family: "Work Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 14px 32px;
+        border-radius: 999px;
+        transition: all 0.3s ease;
+        display: inline-block;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+
+    .elementor-btn-primary {
+        background: #000000;
+        color: #ffffff;
+        border-color: #000000;
+    }
+
+    .elementor-btn-primary:hover {
+        background: #333333;
+        border-color: #333333;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .elementor-btn-on-dark {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+
+    .elementor-btn-on-dark:hover {
+        background: #f0f0f0;
+        border-color: #f0f0f0;
+        transform: translateY(-2px);
+    }
+
+    /* ===== USE CASE CARDS ===== */
+    .use-case-card img { transition: transform 0.6s ease; }
+    .use-case-card:hover img { transform: scale(1.04); }
+
+    .use-case-tag {
+        font-family: "Work Sans", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: #000000;
+    }
+
+    .use-case-card h3 {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 600;
+        color: #000000;
+        font-size: 18px;
+        line-height: 1.35;
+    }
+
+    .use-case-card p.desc {
+        font-family: "Hanken Grotesk", sans-serif;
+        color: #000000;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* ===== FEATURE GRID ===== */
+    .feature-item { display: flex; gap: 20px; }
+
+    .feature-icon {
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000000;
+        color: #ffffff;
+        border-radius: 14px;
+        font-size: 22px;
+    }
+
+    .feature-title {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+
+    .feature-desc {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 15px;
+        color: #000000;
+        line-height: 1.7;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+        background: #000000;
+        border-radius: 20px;
+        padding: 80px 40px;
+        text-align: center;
+    }
+
+    .cta-section h2 {
+        color: #ffffff;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .cta-section p {
+        color: #ffffff;
+        opacity: 0.85;
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto 30px;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer { background: #ffffff; padding: 80px 0 30px; }
+
+    .footer-heading {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: #000000;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+
+    .footer-links li {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 15px;
+        color: #000000;
+        margin-bottom: 14px;
+        transition: color 0.25s ease, padding-left 0.25s ease;
+        cursor: pointer;
+    }
+
+    .footer-links li:hover { color: #555555; padding-left: 4px; }
+
+    .footer-about {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 15px;
+        color: #000000;
+        line-height: 1.75;
+    }
+
+    .footer-social {
+        width: 40px; height: 40px;
+        display: inline-flex; align-items: center; justify-content: center;
+        background: #f0f2f5;
+        border-radius: 50%;
+        color: #1f1f1f;
+        transition: all 0.3s ease;
+        font-size: 15px;
+    }
+
+    .footer-social:hover {
+        background: #000000;
+        color: #ffffff;
+        transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 14px;
+        color: #000000;
+        border-top: 1px solid #eef0f3;
+        padding-top: 24px;
+        margin-top: 60px;
+    }
+
+    .footer-bottom a:hover { color: #555555; }
+
+    @media (max-width: 768px) {
+        .hero-title { font-size: 36px !important; }
+        h2 { font-size: 28px !important; }
+        .cta-section { padding: 50px 24px; }
+        .cta-section h2 { font-size: 26px; }
+    }
 </style>
-  <body>
-    <!-- Page loading -->
-    <div
-      class="page-loading fixed top-0 bottom-0 left-0 right-0 z-[99999] flex items-center justify-center bg-primary-light-1 dark:bg-primary-dark-1 opacity-100 visible pointer-events-auto"
-      role="status"
-      aria-live="polite"
-      aria-atomic="true"
-      aria-label="Loading..."
-    >
-      <div class="grid-loader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-   <!-- Navbar -->
-<header
-  class="ic-navbar absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
-  role="banner"
-  aria-label="Navigation bar"
->
-  <div class="container">
-    <div class="ic-navbar-container relative -mx-5 flex items-center justify-between">
-      
-    <!-- YOUR NAVBAR LOGO - JUST REPLACE YOUR OLD ONE WITH THIS -->
-  <div class="w-60 lg:w-56 max-w-full px-5">
-    <a href="." class="ic-navbar-logo inline-flex items-center w-full py-5 space-x-3">
-      <img 
-        id="navbar-logo"
-        src="./assets/img/EvPay White.svg"
-        alt="Evpay Logo"
-      />
-    </a>
-  </div>
-  <!-- END LOGO -->
+</head>
+<body>
 
-      <div class="flex w-full items-center justify-between px-5">
-        <div>
-          <button
-            type="button"
-            class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-primary-color ring-primary focus:ring-2 lg:hidden"
-            data-web-toggle="navbar-collapse"
-            data-web-target="navbarMenu"
-            aria-expanded="false"
-            aria-label="Toggle navigation menu"
-          >
-            <i class="lni lni-menu"></i>
-          </button>
+<!-- Overlay -->
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
 
-          <nav
-            id="navbarMenu"
-            class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
-          >
-            <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
-              <li class="group relative">
-                               <a href="/index.html" 
-     onclick="window.location.href='/index.html'; return false;"
-     class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
-    Home
-  </a>
-              </li>
-             <li class="group relative">
-                 <a href="/index.html" 
-     onclick="window.location.href='/index.html'; return false;"
-     class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
-    Services
-  
-    <!-- Chevron Down Icon -->
-    <svg class="ml-2 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-    </svg>
-  </a>
-
-  <!-- Dropdown Menu - Beautiful & Matches Header -->
-  <div class="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-56 
-                  bg-primary-light-1 dark:bg-primary-dark-1 
-                  border border-white/10 
-                  rounded-xl shadow-2xl overflow-hidden z-50
-                  opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                  transition-all duration-300 ease-out 
-                  before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 
-                  before:border-8 before:border-transparent 
-                  before:border-b-primary-light-1 dark:before:border-b-primary-dark-1">
-    
-    <ul class="py-4 text-sm font-medium">
-      <li>
-        <a href="/collection.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
-          Collection
-        </a>
-      </li>
-      <li>
-        <a href="/payout.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
-          Payout
-        </a>
-      </li>
-      <li>
-        <a href="/card.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
-          Card Payment
-        </a>
-      </li>
-    </ul>
-  </div>
-</li>
- <!-- <li class="group relative">
-  <a href="/login.html" 
-     onclick="window.location.href='/login.html'; return false;"
-     class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
-    API docs
-  </a>
-</li> -->
-             <li class="group relative">
-  <a href="/contact.html" 
-     onclick="window.location.href='/contact.html'; return false;"
-     class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
-    Contact
-  </a>
-</li>
-
-            </ul>
-          </nav>
-        </div>
-
-        <div class="flex items-center justify-end pr-[52px] lg:pr-0">
-          <button
-            type="button"
-            class="inline-flex items-center text-primary-color text-[24px]/none"
-            aria-label="Switch theme"
-            data-web-trigger="web-theme"
-          ></button>
-          <div class="hidden sm:flex">
-            <a
-              href=""
-              class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
-              role="button"
-            >Get Started</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-      <!-- Hero section -->
-      <section
-        id="home"
-        class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]"
-      >
-        <div class="container">
-          <div class="-mx-5 flex flex-wrap items-center">
-            <div class="w-full px-5">
-              <div class="scroll-revealed mx-auto max-w-[780px] text-center">
-                               <h3 class="mb-6 text-4xl font-extrabold text-primary-color underline decoration-4 decoration-primary/40">
-  Payout Service
-</h3>
-
-
-                <h1
-                  class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
-                >
-                Enterprise-grade payouts, simplified
-                </h1>
-
-                <p
-                  class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal"
-                >
-           Move money out reliably wallets, banks, and (where enabled) card-to-card backed by webhooks and reconciliation tools.
-                </p>
-
-                <ul
-                  class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5"
-                >
-                  <!-- <li>
-                    <a
-                      href="javascript:void(0)"
-                      class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]"
-                      role="button"
-                      >Get Started</a
-                    >
-                  </li>
-
-                  <li>
-                    <a
-                      href="javascript:boid(0)"
-                      class="video-popup flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]"
-                      role="button"
-                      ><i class="lni lni-play text-lg/none"></i> Watch Intro</a
-                    >
-                  </li> -->
-                </ul>
-
-                <div>
-                  <!-- <p class="mb-4 text-center text-primary-color">Powered by</p> -->
-
-                  <div
-                    class="scroll-revealed flex items-center justify-center gap-4 text-center"
-                  >
-                    <a
-                      href="https://evmak.com/"
-                      target="_blank"
-                      class="text-primary-color/60 hover:text-primary-color"
-                    >
-                      <svg
-                        class="fill-current"
-                        height="56"
-                        viewBox=".16 .18 799.8 98.72"
-                        xmlns="./assets/img/EvPay UI 1.png"
-                      >
-                 
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-5">
-              <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
-                <figure class="mt-16">
-                  <img
-                    src="./assets/img/EvPay UI 1.png"
-                    alt="Hero image"
-                     height="56"
-                    class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
-                  />
-                </figure>
-
-                <!-- <div class="absolute -left-9 bottom-0 z-[-1]">
-                  <img
-                    src="./assets/img/dots.svg"
-                    alt
-                    class="w-[120px] opacity-75"
-                  />
-                </div>
-
-                <div class="absolute -right-6 -top-6 z-[-1]">
-                  <img
-                    src="./assets/img/dots.svg"
-                    alt
-                    class="w-[120px] opacity-75"
-                  />
-                </div> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
- <!-- About section -->
-<section id="about" class="section-area py-16 bg-gray-50 dark:bg-gray-900">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-      <!-- Image -->
-      <div class="w-full flex justify-center">
-        <figure class="max-w-[480px] w-full">
-          <img
-            src="./assets/img/about-img.jpg"
-            alt="Collection Service by EvMak"
-            class="rounded-xl shadow-lg object-cover w-full h-auto"
-          />
-        </figure>
-      </div>
-
-<!-- Content -->
-<div class="w-full">
-  <div class="mb-6">
-    <h6 class="text-lg font-semibold text-primary mb-2">Common Use Cases</h6>
-    <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">
-      The following are the common use cases for our Collection Service.
-    </h2>
-  </div>
-
-  <!-- Feature List with Icons -->
-  <div class="space-y-5">
-
-    <!-- Feature Item -->
-    <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
-      <div class="flex-shrink-0 text-primary text-2xl mt-1">
-        <i class="fas fa-store"></i>
-      </div>
-      <div>
-        <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">
-          Marketplaces Paying Sellers
-        </h4>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">
-          Handle payouts to sellers efficiently, ensuring fast, accurate, and automated settlement flows for marketplace transactions.
-        </p>
-      </div>
+<!-- Drawer -->
+<div id="drawer" class="drawer">
+    <div class="drawer-identity">
+        <a href="#"><img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="EvMak"></a>
+        <button class="drawer-close" onclick="toggleMenu()" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
     </div>
 
-    <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
-      <div class="flex-shrink-0 text-primary text-2xl mt-1">
-        <i class="fas fa-briefcase"></i>
-      </div>
-      <div>
-        <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">
-          Gig Platforms Paying Workers
-        </h4>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">
-          Disburse earnings to gig workers instantly or on schedule, supporting high-volume automated payouts for freelancer and gig ecosystems.
-        </p>
-      </div>
+    <nav class="drawer-nav">
+        <a href="https://evmak.com/">HOME <i class="fas fa-chevron-right"></i></a>
+        <a href="https://evmak.com/about-us/">ABOUT US <i class="fas fa-chevron-right"></i></a>
+        <a href="https://evmak.com/">PRODUCTS <i class="fas fa-chevron-right"></i></a>
+        <a href="https://evmak.com/career/">CAREER <i class="fas fa-chevron-right"></i></a>
+        <a href="https://evmak.com/contact-us/">REACH US <i class="fas fa-chevron-right"></i></a>
+    </nav>
+
+    <div class="drawer-footer">
+        <button class="lets-talk-btn">LET'S TALK</button>
     </div>
-
-    <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
-      <div class="flex-shrink-0 text-primary text-2xl mt-1">
-        <i class="fas fa-users"></i>
-      </div>
-      <div>
-        <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">
-          Cooperatives & Associations
-        </h4>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">
-          Facilitate contributions, distributions, membership payments, and financial flows within cooperatives and associations.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
-      <div class="flex-shrink-0 text-primary text-2xl mt-1">
-        <i class="fas fa-hand-holding-heart"></i>
-      </div>
-      <div>
-        <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">
-          NGOs Distributing Funds
-        </h4>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">
-          Seamlessly deliver funds to beneficiaries, field workers, or partner organizations with automated tracking and transparency.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
-      <div class="flex-shrink-0 text-primary text-2xl mt-1">
-        <i class="fas fa-university"></i>
-      </div>
-      <div>
-        <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">
-          Fintechs Moving Float & Refunds
-        </h4>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">
-          Support internal transfers, wallet float movements, customer refunds, and operational financial flows for fintech platforms.
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- CTA Buttons -->
-  <!-- <div class="mt-8 flex flex-wrap gap-4">
-    <a href="#start-collecting" class="px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all">
-      Launch Payout
-    </a>
-    <a href="#docs" class="px-6 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all">
-      Read Payouts Docs
-    </a>
-  </div> -->
 </div>
 
+<!-- Navbar (NOT sticky) -->
+<nav class="nav-height flex items-center animate-fadeInDown">
+    <div class="max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
+
+        <div class="flex items-center">
+            <img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" class="nav-logo" alt="EvMak">
+        </div>
+
+        <div class="desktop-menu hidden md:flex gap-10 items-center">
+            <a href="https://evmak.com/">HOME</a>
+            <a href="https://evmak.com/about-us/">ABOUT US</a>
+            <a href="https://evmak.com/">PRODUCTS</a>
+            <a href="https://evmak.com/career/">CAREER</a>
+            <a href="https://evmak.com/contact-us/">REACH US</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button class="lets-talk-btn hidden md:block">LET'S TALK</button>
+            <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </div>
-  </div>
-</section>
+</nav>
 
-<!-- Include Font Awesome for icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- Hero Section -->
+<section class="px-6 mt-4">
+  <div class="relative max-w-7xl mx-auto rounded-2xl overflow-hidden min-h-[600px] flex items-center">
+    <img src="./assets/img/EvPay UI 1.png" alt="Payout Service Hero"
+         class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent"></div>
 
-<!-- Lineicons CDN (REQUIRED for icons to show) -->
-<link
-  rel="stylesheet"
-  href="https://cdn.lineicons.com/4.0/lineicons.css"
-/>
-<!-- FAQ section -->
-<section id="faq" class="section-area relative">
-  <div class="container">
-    <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-      <h2 class="mb-6">What you get</h2>
-      <p>
-        Here are what you get when using Collection Service.
+    <div class="relative z-10 px-10 md:px-16 max-w-2xl wow">
+      <p class="mb-5" style="font-family:'Work Sans'; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#ffffff; display:inline-block; padding:8px 18px; border:1px solid rgba(255,255,255,0.3); border-radius:999px;">
+        PAYOUT SERVICE
+      </p>
+
+      <h1 class="hero-title text-5xl md:text-6xl">
+        Enterprise-grade<br>
+        payouts,<br>
+        simplified
+      </h1>
+
+      <p class="mt-8 text-lg md:text-xl hero-subtext">
+        Move money out reliably — wallets, banks, and (where enabled) card-to-card —
+        backed by webhooks and reconciliation tools. One API, multiple rails, full visibility.
       </p>
     </div>
-
-    <div class="grid gap-x-8 gap-y-12 grid-cols-1 lg:grid-cols-2">
-
-      <!-- Multi-Rail Support -->
-      <div class="scroll-revealed flex">
-        <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
-        >
-          <i class="fa-solid fa-chart-line"></i>
-        </div>
-        <div class="w-full">
-          <h3 class="mb-6 text-xl font-semibold">Multi-Rail Support</h3>
-          <p>Mobile money, bank transfers, and card-to-card rails (where available) in one unified system.</p>
-        </div>
-      </div>
-
-      <!-- Real-Time Status -->
-      <div class="scroll-revealed flex">
-        <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
-        >
-          <i class="fa-solid fa-headset"></i>
-        </div>
-        <div class="w-full">
-          <h3 class="mb-6 text-xl font-semibold">Real-Time Status</h3>
-          <p>Dashboards and event streams give instant visibility into every transaction’s progress.</p>
-        </div>
-      </div>
-
-      <!-- Reconciliation -->
-      <div class="scroll-revealed flex">
-        <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
-        >
-          <i class="fa-solid fa-table-list"></i>
-        </div>
-        <div class="w-full">
-          <h3 class="mb-6 text-xl font-semibold">Reconciliation</h3>
-          <p>Batch and item-level reports, returns handling, and detailed settlement views simplify operations.</p>
-        </div>
-      </div>
-
-      <!-- SLA & Scale -->
-      <div class="scroll-revealed flex">
-        <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
-        >
-          <i class="fa-solid fa-shield-halved"></i>
-        </div>
-        <div class="w-full">
-          <h3 class="mb-6 text-xl font-semibold">SLA & Scale</h3>
-          <p>Built for high availability with monitoring, alerts, and failover support for mission-critical volume.</p>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
-     
-   
-    <!-- Call to action section -->
-<section
-  id="call-action"
-  class="section-area !bg-primary !text-primary-color"
->
-  <div class="container">
-    <div class="scroll-revealed text-center max-w-[550px] mx-auto">
-      <h2 class="mb-8 text-inherit">
-        Empower Your Business with EvPay Solutions
-      </h2>
-      <p>
-        EVPAY provides innovative and reliable solutions tailored to help your business thrive in the modern digital landscape. From seamless integrations to intelligent automation, we ensure your operations are efficient, secure, and future-ready.
+
+<!-- Why Choose Our Payout Service -->
+<section class="w-full bg-white py-20 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+
+    <div class="flex justify-center lg:justify-start wow-left wow">
+      <div class="rounded-2xl overflow-hidden shadow-lg">
+        <img src="./assets/img/EvPay UI 2.png" alt="Payout platform"
+             class="w-full h-[420px] object-cover" />
+      </div>
+    </div>
+
+    <div class="text-left wow wow-delay-200">
+      <h2 class="section-heading text-3xl md:text-4xl">Why choose our Payout Service</h2>
+
+      <p class="mt-5 section-subheading">
+        Our Payout Service helps businesses disburse funds quickly, accurately, and at scale —
+        across multiple rails and destinations — without the spreadsheets and manual work.
       </p>
-      <a
-        href="/login.html"
-        class="inline-block px-6 py-3 rounded-md mt-11 bg-green-400 text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white transition-colors duration-300"
-        role="button"
-      >
-        Get Started with EVPAY
-      </a>
+
+      <ul class="mt-6 space-y-3 body-list">
+        <li>• Higher conversion with multi-rail payout options</li>
+        <li>• Lower support load with precise error codes and retries</li>
+        <li>• Fewer spreadsheets with settlement views and exports</li>
+        <li>• Built for compliance — PSP-licensed with locally hosted data</li>
+      </ul>
+    </div>
+
+    <div class="space-y-6 wow wow-delay-400">
+      <div class="rounded-xl overflow-hidden shadow-lg">
+        <img src="./assets/img/about-img.jpg" alt="How payouts work"
+             class="w-full h-[280px] object-cover" />
+      </div>
+
+      <div>
+        <h3 class="text-xl mb-3" style="font-family:'Hanken Grotesk'; font-weight:600; color:#000000;">
+          Built for scale and reliability
+        </h3>
+        <p class="section-subheading text-sm">
+          From single transfers to bulk disbursements, everything is optimized for high availability,
+          real-time visibility, and seamless reconciliation — so your operations never skip a beat.
+        </p>
+      </div>
     </div>
   </div>
 </section>
-<!-- FAQ section -->
-<section id="faq" class="section-area relative">
-  <div class="container">
-    <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-      <h2 class="mb-6">Why It’s Better</h2>
-      <p>
-        Here are what you get when using Collection Service.
-      </p>
+
+<div class="max-w-7xl mx-auto px-8">
+
+<!-- Common Use Cases -->
+<h2 class="text-center section-heading text-4xl mb-6 wow">Common Use Cases</h2>
+<p class="text-center section-subheading max-w-2xl mx-auto mb-16 wow wow-delay-200">
+  From marketplaces to NGOs, EvPay Payout Service powers how Tanzania's businesses send money out.
+</p>
+
+<div class="grid md:grid-cols-3 gap-10 pb-16">
+
+    <div class="use-case-card wow">
+        <div class="overflow-hidden rounded-md">
+            <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover" alt="Marketplaces">
+        </div>
+        <h3 class="mt-6">Marketplaces Paying Sellers</h3>
+        <p class="use-case-tag mt-2 uppercase">SELLER SETTLEMENTS</p>
+        <p class="desc mt-3">Handle payouts to sellers efficiently, ensuring fast, accurate, and automated settlement flows for marketplace transactions.</p>
     </div>
 
-    <div class="grid gap-x-8 gap-y-12 grid-cols-1 lg:grid-cols-2">
-
-      <!-- Higher conversion -->
-      <div class="scroll-revealed flex">
-        <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
-        >
-          <i class="fa-solid fa-chart-line"></i>
+    <div class="use-case-card wow wow-delay-200">
+        <div class="overflow-hidden rounded-md">
+            <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover" alt="Gig Platforms">
         </div>
-        <div class="w-full">
-          <h3 class="mb-6 text-xl font-semibold">Higher conversion</h3>
-          <p>Multiple rails reduce friction at checkout and meet customers where they pay.</p>
-        </div>
-      </div>
-
-      <!-- Lower support load -->
-      <div class="scroll-revealed flex">
-        <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
-        >
-          <i class="fa-solid fa-headset"></i>
-        </div>
-        <div class="w-full">
-          <h3 class="mb-6 text-xl font-semibold">Lower support load</h3>
-          <p>Precise error messages and built-in retry logic cut failed payments and tickets.</p>
-        </div>
-      </div>
-
-      <!-- Fewer spreadsheets -->
-      <div class="scroll-revealed flex">
-        <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
-        >
-          <i class="fa-solid fa-table-list"></i>
-        </div>
-        <div class="w-full">
-          <h3 class="mb-6 text-xl font-semibold">Fewer spreadsheets</h3>
-          <p>Settlement views and exports save finance hours each week.</p>
-        </div>
-      </div>
-
-      <!-- Built for compliance -->
-      <div class="scroll-revealed flex">
-        <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
-        >
-          <i class="fa-solid fa-shield-halved"></i>
-        </div>
-        <div class="w-full">
-          <h3 class="mb-6 text-xl font-semibold">Built for compliance</h3>
-          <p>PSP-licensed with data hosted locally.</p>
-        </div>
-      </div>
-
+        <h3 class="mt-6">Gig Platforms Paying Workers</h3>
+        <p class="use-case-tag mt-2 uppercase">WORKER DISBURSEMENTS</p>
+        <p class="desc mt-3">Disburse earnings to gig workers instantly or on schedule, supporting high-volume automated payouts for freelancer and gig ecosystems.</p>
     </div>
+
+    <div class="use-case-card wow wow-delay-400">
+        <div class="overflow-hidden rounded-md">
+            <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover" alt="Cooperatives">
+        </div>
+        <h3 class="mt-6">Cooperatives &amp; Associations</h3>
+        <p class="use-case-tag mt-2 uppercase">MEMBER PAYMENTS</p>
+        <p class="desc mt-3">Facilitate contributions, distributions, membership payments, and financial flows within cooperatives and associations.</p>
+    </div>
+
+</div>
+
+<div class="grid md:grid-cols-3 gap-10 pb-16">
+
+    <div class="use-case-card wow">
+        <div class="overflow-hidden rounded-md">
+            <img src="./assets/img/EvPay UI 2.png" class="w-full h-[280px] object-cover" alt="NGOs">
+        </div>
+        <h3 class="mt-6">NGOs Distributing Funds</h3>
+        <p class="use-case-tag mt-2 uppercase">BENEFICIARY PAYMENTS</p>
+        <p class="desc mt-3">Seamlessly deliver funds to beneficiaries, field workers, or partner organizations with automated tracking and full transparency.</p>
+    </div>
+
+    <div class="use-case-card wow wow-delay-200">
+        <div class="overflow-hidden rounded-md">
+            <img src="./assets/img/about-img.jpg" class="w-full h-[280px] object-cover" alt="Fintechs">
+        </div>
+        <h3 class="mt-6">Fintechs Moving Float &amp; Refunds</h3>
+        <p class="use-case-tag mt-2 uppercase">OPERATIONAL FLOWS</p>
+        <p class="desc mt-3">Support internal transfers, wallet float movements, customer refunds, and operational financial flows for fintech platforms.</p>
+    </div>
+
+    <div class="use-case-card wow wow-delay-400">
+        <div class="overflow-hidden rounded-md">
+            <img src="./assets/img/hero.png" class="w-full h-[280px] object-cover" alt="Bulk Disbursements">
+        </div>
+        <h3 class="mt-6">Bulk Salary &amp; Vendor Payments</h3>
+        <p class="use-case-tag mt-2 uppercase">PAYROLL &amp; VENDORS</p>
+        <p class="desc mt-3">Run payroll or pay hundreds of vendors in one upload. Upload a CSV, review, approve, and watch transfers complete in real time.</p>
+    </div>
+
+</div>
+
+<!-- Why It's Better -->
+<section class="py-20">
+  <div class="text-center max-w-2xl mx-auto mb-16 wow">
+    <h2 class="section-heading text-3xl md:text-4xl mb-4">Why It's Better</h2>
+    <p class="section-subheading">Built to remove friction, reduce overhead, and keep your finance team happy.</p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-14">
+
+    <div class="feature-item wow">
+      <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+      <div>
+        <h3 class="feature-title">Higher Conversion</h3>
+        <p class="feature-desc">Multiple rails reduce friction at payout and meet recipients on the channels they already trust and use.</p>
+      </div>
+    </div>
+
+    <div class="feature-item wow wow-delay-200">
+      <div class="feature-icon"><i class="fas fa-headset"></i></div>
+      <div>
+        <h3 class="feature-title">Lower Support Load</h3>
+        <p class="feature-desc">Precise error messages and built-in retry logic cut failed payments and reduce support tickets dramatically.</p>
+      </div>
+    </div>
+
+    <div class="feature-item wow">
+      <div class="feature-icon"><i class="fas fa-file-excel"></i></div>
+      <div>
+        <h3 class="feature-title">Fewer Spreadsheets</h3>
+        <p class="feature-desc">Settlement views and automated exports save your finance team hours each week on reconciliation and reporting.</p>
+      </div>
+    </div>
+
+    <div class="feature-item wow wow-delay-200">
+      <div class="feature-icon"><i class="fas fa-lock"></i></div>
+      <div>
+        <h3 class="feature-title">Built for Compliance</h3>
+        <p class="feature-desc">PSP-licensed with data hosted locally in Tanzania. Meet regulatory requirements without extra engineering effort.</p>
+      </div>
+    </div>
+
   </div>
 </section>
-        <div>
-          <span class="absolute left-5 top-5 -z-[1]">
-            <svg
-              class="w-20 h-auto fill-teal-500"
-              version="1.0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="1280.000000pt"
-              height="1280.000000pt"
-              viewBox="0 0 1280.000000 1280.000000"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <g
-                transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                stroke="none"
-              >
-                <path
-                  d="M550 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 12465 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 254
--255 194 -41 395 142 375 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217
-16z"
-                />
-                <path
-                  d="M3110 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 12465 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
--319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M12070 12465 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
--319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M550 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 11185 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 254
--255 194 -41 395 142 375 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217
-16z"
-                />
-                <path
-                  d="M3110 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 11185 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
--319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M12070 11185 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
--319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M550 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 4785 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M4390 4785 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M5670 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 3505 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M4390 3505 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M5670 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 2225 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M4390 2225 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M5670 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-              </g>
-            </svg>
-          </span>
-          <span class="absolute right-5 bottom-5 -z-[1]">
-            <svg
-              class="w-20 h-auto fill-indigo-500"
-              version="1.0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="1280.000000pt"
-              height="1280.000000pt"
-              viewBox="0 0 1280.000000 1280.000000"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <g
-                transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                stroke="none"
-              >
-                <path
-                  d="M550 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 12465 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 254
--255 194 -41 395 142 375 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217
-16z"
-                />
-                <path
-                  d="M3110 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 12465 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
--319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M12070 12465 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
--319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M550 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 11185 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 254
--255 194 -41 395 142 375 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217
-16z"
-                />
-                <path
-                  d="M3110 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 11185 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
--319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M12070 11185 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
--319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M550 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 4785 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M4390 4785 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M5670 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 3505 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M4390 3505 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M5670 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
-193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 2225 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M4390 2225 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
-107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
-                />
-                <path
-                  d="M5670 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M550 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M1830 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M3110 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M4390 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M5670 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M6950 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M8230 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M9510 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
-155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M10790 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-                <path
-                  d="M12070 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
--369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
-                />
-              </g>
-            </svg>
-          </span>
+
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-10">
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-16 items-start">
+
+            <div class="max-w-xs wow">
+                <div class="flex items-center mb-6">
+                    <img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="Logo" class="h-8 w-auto">
+                </div>
+
+                <p class="footer-about">
+                    Your technology partner for innovative and impactful digital solutions.
+                    Follow us on social media for updates.
+                </p>
+
+                <div class="flex gap-3 mt-6">
+                    <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="wow wow-delay-200">
+                <h4 class="footer-heading">SERVICES</h4>
+                <ul class="footer-links">
+                    <li>Collection</li>
+                    <li>Payout</li>
+                    <li>Card Payment</li>
+                    <li>API Docs</li>
+                </ul>
+            </div>
+
+            <div class="wow wow-delay-400">
+                <h4 class="footer-heading">COMPANY</h4>
+                <ul class="footer-links">
+                    <li>About</li>
+                    <li>Partnership</li>
+                    <li>Products</li>
+                    <li>Career</li>
+                </ul>
+            </div>
+
+            <div class="wow wow-delay-600">
+                <h4 class="footer-heading">LINKS</h4>
+                <ul class="footer-links">
+                    <li>Contact</li>
+                    <li>Help Center</li>
+                    <li>Let us Have coffee</li>
+                    <li>Services</li>
+                </ul>
+            </div>
         </div>
-      </section>
 
-      
-
-    <!-- Footer -->
-    <footer class="bg-primary-dark-2 text-white">
-      <div class="container py-20 lg:py-[100px]">
-        <div class="row">
-          <div class="col-12 order-first lg:col-4">
-            <div class="w-full">
-              <a href="." class="inline-block mb-5">
-                <svg
-                  id="FooterBrand"
-                  class="h-[40px]"
-                  data-name="FooterBrand"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 500 118.11"
-                >
-                <img 
-  src="./assets/img/EvPay White.svg" 
-  alt="Evpay Logo" 
-  class="h-8 w-auto max-h-10 object-contain"
-  style="max-height:60px;" 
-  onerror="this.style.display='none'" 
-/>
-
-
-                  <!-- <path
-                    d="M272.26,29.77h14.86V58q0,8.24,1.13,11.44a10,10,0,0,0,3.64,5,10.44,10.44,0,0,0,6.18,1.77,10.75,10.75,0,0,0,6.23-1.75,10.26,10.26,0,0,0,3.81-5.14q.92-2.52.91-10.82V29.77h14.7V54.59q0,15.33-2.42,21a23,23,0,0,1-8.72,10.58q-5.76,3.68-14.64,3.68-9.65,0-15.59-4.3a22.79,22.79,0,0,1-8.37-12q-1.73-5.32-1.72-19.37Z"
-                    style="fill: #eeeef0"
-                  />
-                  <path
-                    d="M338.36,29.77h14.69V36.5a25.29,25.29,0,0,1,8.38-6.19,24.53,24.53,0,0,1,10.05-2A18.63,18.63,0,0,1,381.39,31a19.46,19.46,0,0,1,7.11,7.86A23.64,23.64,0,0,1,397.09,31a23.34,23.34,0,0,1,11.12-2.69,20.65,20.65,0,0,1,11,2.9A16.79,16.79,0,0,1,426,38.76q2.08,4.68,2.08,15.24V88.34h-14.8V58.62q0-9.94-2.48-13.48t-7.43-3.52a11.22,11.22,0,0,0-6.75,2.15,12.66,12.66,0,0,0-4.44,5.95q-1.45,3.8-1.46,12.19V88.34h-14.8V60q0-7.86-1.16-11.38a10.27,10.27,0,0,0-3.48-5.25,9.15,9.15,0,0,0-5.61-1.72A11,11,0,0,0,359,43.8a13,13,0,0,0-4.48,6.1q-1.49,3.93-1.49,12.38V88.34H338.36Z"
-                    style="fill: #eeeef0"
-                  />
-                  <path
-                    d="M485.31,29.77H500V88.34H485.31V82.15A29,29,0,0,1,476.68,88a24.24,24.24,0,0,1-9.39,1.8q-11.34,0-19.62-8.8t-8.28-21.88q0-13.56,8-22.23a25.55,25.55,0,0,1,19.47-8.66,24.72,24.72,0,0,1,9.89,2,27.17,27.17,0,0,1,8.55,6ZM469.86,41.83a14.85,14.85,0,0,0-11.32,4.82A17.33,17.33,0,0,0,454,59a17.55,17.55,0,0,0,4.59,12.49,14.85,14.85,0,0,0,11.29,4.9,15.15,15.15,0,0,0,11.48-4.82Q486,66.76,486,59q0-7.65-4.56-12.38A15.31,15.31,0,0,0,469.86,41.83Z"
-                    style="fill: #eeeef0"
-                  />
-                  <path
-                    d="M28,29.77h14.7v6a35.37,35.37,0,0,1,9-5.87,22.09,22.09,0,0,1,8.31-1.64,20.09,20.09,0,0,1,14.78,6.08Q80,39.51,80,49.64v38.7H65.45V62.69q0-10.48-.94-13.92a9.57,9.57,0,0,0-3.27-5.25,9.18,9.18,0,0,0-5.78-1.8,10.82,10.82,0,0,0-7.65,3A16,16,0,0,0,43.38,53q-.65,2.74-.64,11.88v23.5H28Z"
-                    style="fill: #eeeef0"
-                  />
-                  <path
-                    d="M137.42,29.77h14.69V88.34H137.42V82.15A29,29,0,0,1,128.79,88a24.19,24.19,0,0,1-9.38,1.8q-11.34,0-19.63-8.8T91.5,59.16q0-13.56,8-22.23A25.53,25.53,0,0,1,119,28.27a24.69,24.69,0,0,1,9.89,2,27.17,27.17,0,0,1,8.55,6ZM122,41.83a14.87,14.87,0,0,0-11.32,4.82A17.37,17.37,0,0,0,106.15,59a17.54,17.54,0,0,0,4.58,12.49A14.85,14.85,0,0,0,122,76.39a15.12,15.12,0,0,0,11.48-4.82q4.56-4.81,4.56-12.62,0-7.65-4.56-12.38A15.3,15.3,0,0,0,122,41.83Z"
-                    style="fill: #eeeef0"
-                  />
-                  <rect
-                    y="29.77"
-                    width="14.69"
-                    height="58.56"
-                    style="fill: #eeeef0"
-                  />
-                  <polygon
-                    points="226.39 62.27 232.8 68.67 282.23 118.11 163.48 89.2 196.84 55.84 190.43 49.44 140.99 0 259.75 28.91 226.39 62.27"
-                    style="fill: #3d63dd"
-                  /> -->
-                </svg>
-              </a>
-
-              <p class="mb-8 text-body-dark-11">
-                We create digital experiences for brands and companies by using
-                technology.
-              </p>
-
-              <div class="-mx-3 flex items-center">
-                <a
-                  href="javascript:void(0)"
-                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
-                >
-                  <i class="lni lni-facebook-fill"></i>
-                </a>
-
-                <a
-                  href="javascript:void(0)"
-                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
-                >
-                  <i class="lni lni-twitter-original"></i>
-                </a>
-
-                <a
-                  href="javascript:void(0)"
-                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
-                >
-                  <i class="lni lni-instagram-original"></i>
-                </a>
-
-                <a
-                  href="javascript:void(0)"
-                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
-                >
-                  <i class="lni lni-linkedin-original"></i>
-                </a>
-              </div>
+        <div class="footer-bottom flex flex-col md:flex-row justify-between items-center">
+            <p>Copyright @ EvMak Tanzania.</p>
+            <div class="flex items-center gap-4 mt-4 md:mt-0">
+                <a href="#">Privacy Policy</a>
+                <span class="text-gray-400">|</span>
+                <a href="#">Our Terms</a>
             </div>
-          </div>
-          <div class="col-6 lg:col-2">
-            <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">Solutions</h4>
-              <ul>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Marketing</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Analytics</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Commerce</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Insights</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6 lg:col-2">
-            <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">Support</h4>
-              <ul>
-               
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Documentation</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Guides</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >API Status</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 -order-3 lg:col-4 lg:order-1">
-            <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">Subscribe</h4>
-
-              <p class="text-body-dark-11">
-                Subscribe to our newsletter for the latest updates
-              </p>
-
-              <form action="#" method="POST" target="_blank" class="mt-8 flex">
-                <input
-                  type="email"
-                  name="email"
-                  class="inline-block flex-grow px-5 py-3 rounded-md rounded-e-none border border-solid border-alpha-dark text-inherit text-base focus:border-primary"
-                  placeholder="Email address"
-                  required
-                />
-
-                <button
-                  type="submit"
-                  class="inline-block py-3 w-[50px] rounded-md rounded-s-none text-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10"
-                >
-                  <i class="lni lni-envelope"></i>
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="w-full border-t border-solid border-alpha-dark"></div>
-      <div class="container py-8">
-        <div class="flex flex-wrap">
-          <div class="w-full md:w-1/2">
-            <div class="my-1">
-              <div
-                class="flex flex-wrap justify-center gap-x-3 md:justify-start"
-              >
-                <a
-                  href="javascript:void(0)"
-                  class="text-body-dark-11 hover:text-body-dark-12"
-                  >Privacy Policy</a
-                >
-                <a
-                  href="javascript:void(0)"
-                  class="text-body-dark-11 hover:text-body-dark-12"
-                  >Legal Notice</a
-                >
-                <a
-                  href="javascript:void(0)"
-                  class="text-body-dark-11 hover:text-body-dark-12"
-                  >Terms of Service</a
-                >
-              </div>
-            </div>
-          </div>
+    </div>
+</footer>
 
-          <div class="w-full md:w-1/2">
-            <div class="my-1 flex justify-center md:justify-end">
-              <p class="text-body-dark-11">
-                &#169; 2026 EvMak Tanzania. All rights reserved. Distributed by <a href="https://evmak.com" target="_blank">EvMak</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+<script>
+    function toggleMenu() {
+        const drawer = document.getElementById("drawer");
+        const overlay = document.getElementById("overlay");
+        drawer.classList.toggle("active");
+        overlay.classList.toggle("active");
+        document.body.classList.toggle("drawer-open");
+    }
 
-    <button
-      type="button"
-      class="inline-flex w-12 h-12 rounded-md items-center justify-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10 fixed bottom-[117px] right-[20px] hover:-translate-y-1 opacity-100 visible z-50 is-hided"
-      data-web-trigger="scroll-top"
-      aria-label="Scroll to top"
-    >
-      <i class="lni lni-chevron-up"></i>
-    </button>
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.getElementById('drawer').classList.contains('active')) {
+            toggleMenu();
+        }
+    });
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
-    <script type="module" src="./assets/js/main.js"></script>
-    <script>
-      // Scroll Reveal
-      const sr = ScrollReveal({
-        origin: "bottom",
-        distance: "16px",
-        duration: 1000,
-        reset: false,
-      });
+    document.querySelectorAll('.wow').forEach(el => observer.observe(el));
+</script>
 
-      sr.reveal(`.scroll-revealed`, {
-        cleanup: true,
-      });
-
-      // GLightBox
-      GLightbox({
-        selector: ".video-popup",
-        href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
-        type: "video",
-        source: "youtube",
-        width: 900,
-        autoplayVideos: true,
-      });
-
-      const myGallery3 = GLightbox({
-        selector: ".portfolio-box",
-        type: "image",
-        width: 900,
-      });
-
-      // Testimonial
-      const testimonialSwiper = new Swiper(".testimonial-carousel", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1280: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        },
-      });
-    </script>
-  </body>
+</body>
 </html>
