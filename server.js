@@ -3,7 +3,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -11,23 +11,20 @@ const __dirname = path.dirname(__filename)
 const distPath = path.join(__dirname, 'dist')
 
 /**
- * STATIC FILES
+ * Serve static files
  */
 app.use(express.static(distPath))
 
 /**
- * CLEAN URL ROUTING (EXPRESS 4 SAFE)
+ * SAFE FALLBACK ROUTE (NO path-to-regexp issues)
  */
-app.get('*', (req, res) => {
-  const url = req.path
-
-  if (url === '/') {
-    return res.sendFile(path.join(distPath, 'index.html'))
-  }
-
-  res.sendFile(path.join(distPath, url + '.html'))
+app.use((req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'))
 })
 
+/**
+ * Start server
+ */
 app.listen(PORT, () => {
-  console.log(`✅ Running at http://localhost:${PORT}`)
+  console.log(`✅ Server running at http://localhost:${PORT}`)
 })
