@@ -371,7 +371,7 @@
     }
 
     /* ===== FOOTER ===== */
-    .site-footer { background: #ffffff; padding: 80px 0 30px; }
+    .site-footer { background: #ffffff; padding: 40px 0 30px; }
 
     .footer-heading {
         font-family: "Hanken Grotesk", sans-serif;
@@ -459,7 +459,7 @@
     </nav>
 
     <div class="drawer-footer">
-        <button class="lets-talk-btn">API DOCS</button>
+        <a href="http://localhost:3000/introduction" target="_blank" class="lets-talk-btn">API DOCS</a>
     </div>
 </div>
 
@@ -480,16 +480,20 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <button class="lets-talk-btn hidden md:block">API DOCS</button>
-            <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+    <a href="http://localhost:3000/introduction" target="_blank"
+       class="lets-talk-btn hidden md:block">
+        API DOCS
+    </a>
+
+    <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="px-6 mt-4">
+<section class="px-6 md:px-16 pt-4 pb-10">
   <div class="relative max-w-7xl mx-auto rounded-2xl overflow-hidden min-h-[600px] flex items-center">
     <img src="./assets/img/EvPay UI 1.png" alt="Payout Service Hero"
          class="absolute inset-0 w-full h-full object-cover">
@@ -501,13 +505,13 @@
       </p>
 
       <h1 class="hero-title text-5xl md:text-6xl">
-        Enterprise-grade<br>
+        Enterprise grade<br>
         payouts,<br>
         simplified
       </h1>
 
       <p class="mt-8 text-lg md:text-xl hero-subtext">
-        Move money out reliably — wallets, banks, and (where enabled) card-to-card —
+        Move money out reliably  wallets, banks, and (where enabled) card to card 
         backed by webhooks and reconciliation tools. One API, multiple rails, full visibility.
       </p>
     </div>
@@ -515,7 +519,7 @@
 </section>
 
 <!-- Why Choose Our Payout Service -->
-<section class="w-full bg-white py-20 px-6 md:px-16">
+<!-- <section class="w-full bg-white py-10 px-6 md:px-16">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
     <div class="flex justify-center lg:justify-start wow-left wow">
@@ -558,123 +562,125 @@
       </div>
     </div>
   </div>
-</section>
-
-<div class="max-w-7xl mx-auto px-8">
+</section> -->
 
 <!-- Common Use Cases -->
-<h2 class="text-center section-heading text-4xl mb-6 wow">Common Use Cases</h2>
-<p class="text-center section-subheading max-w-2xl mx-auto mb-16 wow wow-delay-200">
-  From marketplaces to NGOs, EvPay Payout Service powers how Tanzania's businesses send money out.
-</p>
+<section class="w-full bg-white py-10 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-center section-heading text-4xl mb-6 wow">Common Use Cases</h2>
+    <p class="text-center section-subheading max-w-2xl mx-auto mb-16 wow wow-delay-200">
+      From marketplaces to NGOs, EvPay Payout Service powers how Tanzania's businesses send money out.
+    </p>
 
-<div class="grid md:grid-cols-3 gap-10 pb-16">
+    <div class="grid md:grid-cols-3 gap-10 mb-10">
 
-    <div class="use-case-card wow">
+      <div class="use-case-card wow">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover" alt="Marketplaces">
+          <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover" alt="Marketplaces">
         </div>
         <h3 class="mt-6">Marketplaces Paying Sellers</h3>
         <p class="use-case-tag mt-2 uppercase">SELLER SETTLEMENTS</p>
         <p class="desc mt-3">Handle payouts to sellers efficiently, ensuring fast, accurate, and automated settlement flows for marketplace transactions.</p>
-    </div>
+      </div>
 
-    <div class="use-case-card wow wow-delay-200">
+      <div class="use-case-card wow wow-delay-200">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover" alt="Gig Platforms">
+          <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover" alt="Gig Platforms">
         </div>
         <h3 class="mt-6">Gig Platforms Paying Workers</h3>
         <p class="use-case-tag mt-2 uppercase">WORKER DISBURSEMENTS</p>
         <p class="desc mt-3">Disburse earnings to gig workers instantly or on schedule, supporting high-volume automated payouts for freelancer and gig ecosystems.</p>
-    </div>
+      </div>
 
-    <div class="use-case-card wow wow-delay-400">
+      <div class="use-case-card wow wow-delay-400">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover" alt="Cooperatives">
+          <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover" alt="Cooperatives">
         </div>
         <h3 class="mt-6">Cooperatives &amp; Associations</h3>
         <p class="use-case-tag mt-2 uppercase">MEMBER PAYMENTS</p>
         <p class="desc mt-3">Facilitate contributions, distributions, membership payments, and financial flows within cooperatives and associations.</p>
+      </div>
+
     </div>
 
-</div>
+    <div class="grid md:grid-cols-3 gap-10">
 
-<div class="grid md:grid-cols-3 gap-10 pb-16">
-
-    <div class="use-case-card wow">
+      <div class="use-case-card wow">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 2.png" class="w-full h-[280px] object-cover" alt="NGOs">
+          <img src="./assets/img/EvPay UI 2.png" class="w-full h-[280px] object-cover" alt="NGOs">
         </div>
         <h3 class="mt-6">NGOs Distributing Funds</h3>
         <p class="use-case-tag mt-2 uppercase">BENEFICIARY PAYMENTS</p>
         <p class="desc mt-3">Seamlessly deliver funds to beneficiaries, field workers, or partner organizations with automated tracking and full transparency.</p>
-    </div>
+      </div>
 
-    <div class="use-case-card wow wow-delay-200">
+      <div class="use-case-card wow wow-delay-200">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/about-img.jpg" class="w-full h-[280px] object-cover" alt="Fintechs">
+          <img src="./assets/img/about-img.jpg" class="w-full h-[280px] object-cover" alt="Fintechs">
         </div>
         <h3 class="mt-6">Fintechs Moving Float &amp; Refunds</h3>
         <p class="use-case-tag mt-2 uppercase">OPERATIONAL FLOWS</p>
         <p class="desc mt-3">Support internal transfers, wallet float movements, customer refunds, and operational financial flows for fintech platforms.</p>
-    </div>
+      </div>
 
-    <div class="use-case-card wow wow-delay-400">
+      <div class="use-case-card wow wow-delay-400">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/hero.png" class="w-full h-[280px] object-cover" alt="Bulk Disbursements">
+          <img src="./assets/img/hero.png" class="w-full h-[280px] object-cover" alt="Bulk Disbursements">
         </div>
         <h3 class="mt-6">Bulk Salary &amp; Vendor Payments</h3>
         <p class="use-case-tag mt-2 uppercase">PAYROLL &amp; VENDORS</p>
         <p class="desc mt-3">Run payroll or pay hundreds of vendors in one upload. Upload a CSV, review, approve, and watch transfers complete in real time.</p>
-    </div>
-
-</div>
-
-<!-- Why It's Better -->
-<section class="py-20">
-  <div class="text-center max-w-2xl mx-auto mb-16 wow">
-    <h2 class="section-heading text-3xl md:text-4xl mb-4">Why It's Better</h2>
-    <p class="section-subheading">Built to remove friction, reduce overhead, and keep your finance team happy.</p>
-  </div>
-
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-14">
-
-    <div class="feature-item wow">
-      <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-      <div>
-        <h3 class="feature-title">Higher Conversion</h3>
-        <p class="feature-desc">Multiple rails reduce friction at payout and meet recipients on the channels they already trust and use.</p>
       </div>
-    </div>
 
-    <div class="feature-item wow wow-delay-200">
-      <div class="feature-icon"><i class="fas fa-headset"></i></div>
-      <div>
-        <h3 class="feature-title">Lower Support Load</h3>
-        <p class="feature-desc">Precise error messages and built-in retry logic cut failed payments and reduce support tickets dramatically.</p>
-      </div>
     </div>
-
-    <div class="feature-item wow">
-      <div class="feature-icon"><i class="fas fa-file-excel"></i></div>
-      <div>
-        <h3 class="feature-title">Fewer Spreadsheets</h3>
-        <p class="feature-desc">Settlement views and automated exports save your finance team hours each week on reconciliation and reporting.</p>
-      </div>
-    </div>
-
-    <div class="feature-item wow wow-delay-200">
-      <div class="feature-icon"><i class="fas fa-lock"></i></div>
-      <div>
-        <h3 class="feature-title">Built for Compliance</h3>
-        <p class="feature-desc">PSP-licensed with data hosted locally in Tanzania. Meet regulatory requirements without extra engineering effort.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-</div>
+<!-- Why It's Better -->
+<section class="w-full bg-white py-10 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16 wow">
+      <h2 class="section-heading text-3xl md:text-4xl mb-4">Why It's Better</h2>
+      <p class="section-subheading">Built to remove friction, reduce overhead, and keep your finance team happy.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-14">
+
+      <div class="feature-item wow">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <div>
+          <h3 class="feature-title">Higher Conversion</h3>
+          <p class="feature-desc">Multiple rails reduce friction at payout and meet recipients on the channels they already trust and use.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow wow-delay-200">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <div>
+          <h3 class="feature-title">Lower Support Load</h3>
+          <p class="feature-desc">Precise error messages and built-in retry logic cut failed payments and reduce support tickets dramatically.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow">
+        <div class="feature-icon"><i class="fas fa-file-excel"></i></div>
+        <div>
+          <h3 class="feature-title">Fewer Spreadsheets</h3>
+          <p class="feature-desc">Settlement views and automated exports save your finance team hours each week on reconciliation and reporting.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow wow-delay-200">
+        <div class="feature-icon"><i class="fas fa-lock"></i></div>
+        <div>
+          <h3 class="feature-title">Built for Compliance</h3>
+          <p class="feature-desc">PSP-licensed with data hosted locally in Tanzania. Meet regulatory requirements without extra engineering effort.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="site-footer">

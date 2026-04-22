@@ -371,7 +371,7 @@
     }
 
     /* ===== FOOTER ===== */
-    .site-footer { background: #ffffff; padding: 80px 0 30px; }
+    .site-footer { background: #ffffff; padding: 40px 0 30px; }
 
     .footer-heading {
         font-family: "Hanken Grotesk", sans-serif;
@@ -459,7 +459,7 @@
     </nav>
 
     <div class="drawer-footer">
-         <button class="lets-talk-btn">API DOCS</button>
+         <a href="http://localhost:3000/introduction" target="_blank" class="lets-talk-btn">API DOCS</a>
     </div>
 </div>
 
@@ -479,17 +479,20 @@
             <a href="https://evmak.com/contact-us/">REACH US</a>
         </div>
 
-        <div class="flex items-center gap-4">
-            <button class="lets-talk-btn hidden md:block">API DOCS</button>
-            <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </div>
+         <div class="flex items-center gap-4">
+    <a href="http://localhost:3000/introduction" target="_blank"
+       class="lets-talk-btn hidden md:block">
+        API DOCS
+    </a>
+
+    <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
 </nav>
 
 <!-- Hero Section -->
-<section class="px-6 mt-4">
+<section class="px-6 md:px-16 pt-4 pb-10">
   <div class="relative max-w-7xl mx-auto rounded-2xl overflow-hidden min-h-[600px] flex items-center">
     <img src="./assets/img/EvPay UI 3.png" alt="Card Payment Service Hero"
          class="absolute inset-0 w-full h-full object-cover">
@@ -507,7 +510,7 @@
       </h1>
 
       <p class="mt-8 text-lg md:text-xl hero-subtext">
-        From online checkout to secure card-on-file — accept Visa, Mastercard, and local cards
+        From online checkout to secure card on file  accept Visa, Mastercard, and local cards
         on a platform that's built for scale, security, and seamless integration.
       </p>
     </div>
@@ -515,7 +518,7 @@
 </section>
 
 <!-- Why Choose Our Card Payment Service -->
-<section class="w-full bg-white py-20 px-6 md:px-16">
+<!-- <section class="w-full bg-white py-10 px-6 md:px-16">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
     <div class="flex justify-center lg:justify-start wow-left wow">
@@ -529,7 +532,7 @@
       <h2 class="section-heading text-3xl md:text-4xl">Why choose our Card Payment Service</h2>
 
       <p class="mt-5 section-subheading">
-        Our Card Payment Service enables businesses to accept card payments online with confidence —
+        Our Card Payment Service enables businesses to accept card payments online with confidence 
         secure, PCI-compliant, and fully integrated into the same platform you already use for mobile money and bank transfers.
       </p>
 
@@ -537,7 +540,7 @@
         <li>• One contract, one API, one dashboard for all payment rails</li>
         <li>• Consistent approvals and roles across all products</li>
         <li>• Built-in resilience with webhooks, retries, and idempotency</li>
-        <li>• Compliance by design — PSP-licensed with local data hosting</li>
+        <li>• Compliance by design  PSP licensed with local data hosting</li>
       </ul>
     </div>
 
@@ -558,139 +561,141 @@
       </div>
     </div>
   </div>
-</section>
-
-<div class="max-w-7xl mx-auto px-8">
+</section> -->
 
 <!-- Cross-Product Benefits -->
-<h2 class="text-center section-heading text-4xl mb-6 wow">Cross-Product Benefits</h2>
-<p class="text-center section-subheading max-w-2xl mx-auto mb-16 wow wow-delay-200">
-  When you enable cards with EvPay, you unlock a set of benefits that work across every product in the platform.
-</p>
+<section class="w-full bg-white py-10 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-center section-heading text-4xl mb-6 wow">Cross-Product Benefits</h2>
+    <p class="text-center section-subheading max-w-2xl mx-auto mb-16 wow wow-delay-200">
+      When you enable cards with EvPay, you unlock a set of benefits that work across every product in the platform.
+    </p>
 
-<div class="grid md:grid-cols-3 gap-10 pb-16">
+    <div class="grid md:grid-cols-3 gap-10 mb-10">
 
-    <div class="use-case-card wow">
+      <div class="use-case-card wow">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover" alt="Unified Platform">
+          <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover" alt="Unified Platform">
         </div>
         <h3 class="mt-6">One Contract, One API, One Dashboard</h3>
         <p class="use-case-tag mt-2 uppercase">UNIFIED PLATFORM</p>
         <p class="desc mt-3">Reduce complexity for your teams with a unified integration and management layer across collection, payout, and cards.</p>
-    </div>
+      </div>
 
-    <div class="use-case-card wow wow-delay-200">
+      <div class="use-case-card wow wow-delay-200">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover" alt="Access Control">
+          <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover" alt="Access Control">
         </div>
         <h3 class="mt-6">Approvals and Roles Everywhere</h3>
         <p class="use-case-tag mt-2 uppercase">ACCESS CONTROL</p>
-        <p class="desc mt-3">Consistent access control and approval workflows across all products — from refund approvals to card transaction overrides.</p>
-    </div>
+        <p class="desc mt-3">Consistent access control and approval workflows across all products  from refund approvals to card transaction overrides.</p>
+      </div>
 
-    <div class="use-case-card wow wow-delay-400">
+      <div class="use-case-card wow wow-delay-400">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover" alt="Resilience">
+          <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover" alt="Resilience">
         </div>
         <h3 class="mt-6">Webhooks &amp; Idempotency</h3>
-        <p class="use-case-tag mt-2 uppercase">BUILT-IN RESILIENCE</p>
-        <p class="desc mt-3">Built-in resilience with clean retries, event notifications, and guaranteed consistency so your integration never misses a beat.</p>
+        <p class="use-case-tag mt-2 uppercase">BUILT IN RESILIENCE</p>
+        <p class="desc mt-3">Built in resilience with clean retries, event notifications, and guaranteed consistency so your integration never misses a beat.</p>
+      </div>
+
     </div>
 
-</div>
+    <div class="grid md:grid-cols-3 gap-10">
 
-<div class="grid md:grid-cols-3 gap-10 pb-16">
-
-    <div class="use-case-card wow">
+      <div class="use-case-card wow">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 2.png" class="w-full h-[280px] object-cover" alt="Compliance">
+          <img src="./assets/img/EvPay UI 2.png" class="w-full h-[280px] object-cover" alt="Compliance">
         </div>
         <h3 class="mt-6">Compliance by Design</h3>
         <p class="use-case-tag mt-2 uppercase">REGULATORY READY</p>
-        <p class="desc mt-3">PSP-licensed infrastructure built around regulatory and operational compliance — so you focus on growth, not paperwork.</p>
-    </div>
+        <p class="desc mt-3">PSP-licensed infrastructure built around regulatory and operational compliance  so you focus on growth, not paperwork.</p>
+      </div>
 
-    <div class="use-case-card wow wow-delay-200">
+      <div class="use-case-card wow wow-delay-200">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/about-img.jpg" class="w-full h-[280px] object-cover" alt="Reporting">
+          <img src="./assets/img/about-img.jpg" class="w-full h-[280px] object-cover" alt="Reporting">
         </div>
         <h3 class="mt-6">Finance-Ready Reporting</h3>
         <p class="use-case-tag mt-2 uppercase">SETTLEMENT &amp; AUDIT</p>
         <p class="desc mt-3">Settlement summaries, exports, and audit logs that drastically reduce finance workload and simplify month-end close.</p>
-    </div>
+      </div>
 
-    <div class="use-case-card wow wow-delay-400">
+      <div class="use-case-card wow wow-delay-400">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/hero.png" class="w-full h-[280px] object-cover" alt="Settlements">
+          <img src="./assets/img/hero.png" class="w-full h-[280px] object-cover" alt="Settlements">
         </div>
         <h3 class="mt-6">Faster Settlements, Fewer Failures</h3>
         <p class="use-case-tag mt-2 uppercase">PERFORMANCE</p>
-        <p class="desc mt-3">Built-in retries, clear error codes, and optimized routing reduce delays and failures — so more payments succeed the first time.</p>
-    </div>
-
-</div>
-
-<!-- What You Get -->
-<section class="py-20">
-  <div class="text-center max-w-2xl mx-auto mb-16 wow">
-    <h2 class="section-heading text-3xl md:text-4xl mb-4">What You Get</h2>
-    <p class="section-subheading">Everything your team needs to accept card payments securely and scale with confidence.</p>
-  </div>
-
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-14">
-
-    <div class="feature-item wow">
-      <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
-      <div>
-        <h3 class="feature-title">Hosted Card Checkout</h3>
-        <p class="feature-desc">Fast, secure, and brandable checkout with support for 3-D Secure where applicable. Optimized for mobile and desktop conversion.</p>
+        <p class="desc mt-3">Built in retries, clear error codes, and optimized routing reduce delays and failures  so more payments succeed the first time.</p>
       </div>
-    </div>
 
-    <div class="feature-item wow wow-delay-200">
-      <div class="feature-icon"><i class="fas fa-lock"></i></div>
-      <div>
-        <h3 class="feature-title">Tokenization</h3>
-        <p class="feature-desc">Save secure tokens for repeat payments, subscriptions, or one-click renewals — without ever storing raw card data in your systems.</p>
-      </div>
     </div>
-
-    <div class="feature-item wow">
-      <div class="feature-icon"><i class="fas fa-triangle-exclamation"></i></div>
-      <div>
-        <h3 class="feature-title">Risk Tools</h3>
-        <p class="feature-desc">Velocity checks and rule-based decisions to reduce fraud and payment failures. Customize thresholds to match your risk appetite.</p>
-      </div>
-    </div>
-
-    <div class="feature-item wow wow-delay-200">
-      <div class="feature-icon"><i class="fas fa-eye"></i></div>
-      <div>
-        <h3 class="feature-title">Unified View</h3>
-        <p class="feature-desc">Cards sit alongside mobile money and bank accounts — one ledger, one reconciliation view, one source of truth for finance.</p>
-      </div>
-    </div>
-
-    <div class="feature-item wow">
-      <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
-      <div>
-        <h3 class="feature-title">PCI Compliance</h3>
-        <p class="feature-desc">Encryption, tokenization, and operational controls built into the platform for security and regulatory compliance out of the box.</p>
-      </div>
-    </div>
-
-    <div class="feature-item wow wow-delay-200">
-      <div class="feature-icon"><i class="fas fa-right-left"></i></div>
-      <div>
-        <h3 class="feature-title">Integrated Rails</h3>
-        <p class="feature-desc">Run card payments alongside your existing mobile money and bank flows seamlessly — all in one system, one dashboard.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-</div>
+<!-- What You Get -->
+<section class="w-full bg-white py-10 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16 wow">
+      <h2 class="section-heading text-3xl md:text-4xl mb-4">What You Get</h2>
+      <p class="section-subheading">Everything your team needs to accept card payments securely and scale with confidence.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-14">
+
+      <div class="feature-item wow">
+        <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
+        <div>
+          <h3 class="feature-title">Hosted Card Checkout</h3>
+          <p class="feature-desc">Fast, secure, and brandable checkout with support for 3-D Secure where applicable. Optimized for mobile and desktop conversion.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow wow-delay-200">
+        <div class="feature-icon"><i class="fas fa-lock"></i></div>
+        <div>
+          <h3 class="feature-title">Tokenization</h3>
+          <p class="feature-desc">Save secure tokens for repeat payments, subscriptions, or one click renewals  without ever storing raw card data in your systems.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow">
+        <div class="feature-icon"><i class="fas fa-triangle-exclamation"></i></div>
+        <div>
+          <h3 class="feature-title">Risk Tools</h3>
+          <p class="feature-desc">Velocity checks and rule-based decisions to reduce fraud and payment failures. Customize thresholds to match your risk appetite.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow wow-delay-200">
+        <div class="feature-icon"><i class="fas fa-eye"></i></div>
+        <div>
+          <h3 class="feature-title">Unified View</h3>
+          <p class="feature-desc">Cards sit alongside mobile money and bank accounts  one ledger, one reconciliation view, one source of truth for finance.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow">
+        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+        <div>
+          <h3 class="feature-title">PCI Compliance</h3>
+          <p class="feature-desc">Encryption, tokenization, and operational controls built into the platform for security and regulatory compliance out of the box.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow wow-delay-200">
+        <div class="feature-icon"><i class="fas fa-right-left"></i></div>
+        <div>
+          <h3 class="feature-title">Integrated Rails</h3>
+          <p class="feature-desc">Run card payments alongside your existing mobile money and bank flows seamlessly  all in one system, one dashboard.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="site-footer">

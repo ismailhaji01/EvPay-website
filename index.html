@@ -368,9 +368,9 @@
     }
 
     .elementor-btn-primary {
-        background: #000000;
+        background: #1a57e4;
         color: #ffffff;
-        border-color: #000000;
+        border-color: #1a57e4;
     }
 
     .elementor-btn-primary:hover {
@@ -384,8 +384,8 @@
     .faq-section {
         background: #ffffff;
         max-width: 1152px;
-        margin: 60px auto;
-        padding: 60px 24px;
+        margin: 0 auto;
+        padding: 40px 24px;
     }
 
     .faq-header { text-align: center; margin-bottom: 50px; }
@@ -454,7 +454,7 @@
     /* ===== FOOTER ===== */
     .site-footer {
         background: #ffffff;
-        padding: 80px 0 30px;
+        padding: 40px 0 30px;
     }
 
     .footer-heading {
@@ -562,16 +562,17 @@
     </div>
 
     <nav class="drawer-nav">
-        <a href="https://evmak.com/">HOME <i class="fas fa-chevron-right"></i></a>
-        <a href="https://evmak.com/about-us/">ABOUT US <i class="fas fa-chevron-right"></i></a>
-        <a href="https://evmak.com/">PRODUCTS <i class="fas fa-chevron-right"></i></a>
-        <a href="https://evmak.com/career/">CAREER <i class="fas fa-chevron-right"></i></a>
-        <a href="https://evmak.com/contact-us/">REACH US <i class="fas fa-chevron-right"></i></a>
+        <a href="https://evmak.com/">HOME </i></a>
+        <a href="https://evmak.com/about-us/">ABOUT US </i></a>
+        <a href="https://evmak.com/">PRODUCTS </i></a>
+        <a href="https://evmak.com/career/">CAREER </i></a>
+        <a href="https://evmak.com/contact-us/">REACH US </i></a>
     </nav>
 
-    <div class="drawer-footer">
-        <button class="lets-talk-btn">API DOCS</button>
-    </div>
+  <button onclick="window.location.href='collection'"
+          class="elementor-btn elementor-btn-primary mt-6">
+          LEARN MORE
+        </button>
 </div>
 
 <!-- Navbar (NOT sticky) -->
@@ -591,16 +592,20 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <button class="lets-talk-btn hidden md:block">API DOCS</button>
-            <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+    <a href="http://localhost:3000/introduction" target="_blank"
+       class="lets-talk-btn hidden md:block">
+        API DOCS
+    </a>
+
+    <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="px-6 mt-4">
+<section class="px-6 md:px-16 pt-4 pb-10">
   <div class="relative max-w-7xl mx-auto rounded-2xl overflow-hidden min-h-[600px] flex items-center">
     <img src="./assets/img/EvPay UI 2.png" alt="Hero"
          class="absolute inset-0 w-full h-full object-cover">
@@ -616,12 +621,24 @@
       <p class="mt-8 text-lg md:text-xl hero-subtext">
         Payment platform that helps businesses receive and send money easily. It allows companies to accept payments from mobile money, banks, cards, and QR codes using just one simple API or dashboard.
       </p>
+
+    <!-- Buttons -->
+<div class="mt-10 flex flex-wrap gap-4">
+  <a href="#"
+     class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-lg font-semibold transition duration-300 shadow-lg">
+    Get Started
+  </a>
+
+  <a href="#"
+     class="px-8 py-3 border border-white text-white hover:bg-white hover:text-black rounded-full text-lg font-semibold transition duration-300">
+    Login
+  </a>
+</div>
     </div>
   </div>
 </section>
-
 <!-- Why Choose EvPay -->
-<section class="w-full bg-white py-20 px-6 md:px-16">
+<section class="w-full bg-white py-10 px-6 md:px-16">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
     <div class="flex justify-center lg:justify-start wow-left wow">
@@ -636,7 +653,7 @@
 
       <p class="mt-5 section-subheading">
         EvPay by EvMak provides a complete suite of digital payment solutions
-        designed for businesses in Tanzania — enabling fast, secure, and flexible
+        designed for businesses in Tanzania  enabling fast, secure, and flexible
         payment collection across mobile money, banks, cards, and more.
       </p>
 
@@ -666,93 +683,107 @@
           with seamless, secure, and scalable digital payment solutions across Tanzania.
         </p>
       </div>
+       <!-- Button -->
+   <div class="mt-6">
+  <a href="https://your-external-link.com" target="_blank"
+     class="inline-block px-8 py-3 bg-blue-600 hover:bg-black-700 text-white rounded-full text-sm font-semibold transition duration-300 shadow-md">
+    Explore More
+  </a>
+</div>
     </div>
   </div>
 </section>
 
-<div class="max-w-7xl mx-auto px-8">
-
 <!-- Intuitive Dashboard -->
-<section class="w-full bg-white py-20 px-6 md:px-16">
+<section class="w-full bg-white py-10 px-6 md:px-16">
   <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-    <div class="w-full lg:w-1/2 wow-left wow">
+    <div class="w-full lg:w-[60%] wow-left wow">
       <div class="rounded-2xl overflow-hidden shadow-lg">
         <img src="./assets/img/hero.png" alt="Dashboard Preview"
-             class="w-full h-auto object-cover" />
+             class="w-full h-auto object-contain" />
       </div>
     </div>
 
-    <div class="w-full lg:w-1/2 wow wow-delay-200">
+    <div class="w-full lg:w-[40%] wow wow-delay-200">
       <h2 class="section-heading text-3xl md:text-4xl mb-6">Intuitive Dashboard</h2>
 
       <p class="section-subheading mb-8">
         Track and manage all your payments in real-time through our user-friendly dashboard featuring
-        detailed analytics, transaction monitoring, settlement tracking, and customizable reports —
+        detailed analytics, transaction monitoring, settlement tracking, and customizable reports 
         all accessible from a single screen with role-based access control.
       </p>
-
-      <!-- <div class="flex gap-10">
-        <div style="font-family:'Work Sans'; font-weight:600; color:#000000; letter-spacing:0.5px;">AI</div>
-        <div style="font-family:'Work Sans'; font-weight:600; color:#000000; letter-spacing:0.5px;">Analytics</div>
-        <div style="font-family:'Work Sans'; font-weight:600; color:#000000; letter-spacing:0.5px;">Actions</div>
-      </div> -->
     </div>
   </div>
 </section>
 
 <!-- Our Solutions -->
-<h2 class="text-center section-heading text-4xl mb-16 wow">Our Solutions</h2>
+<section class="w-full bg-white py-10 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-center section-heading text-4xl mb-16 wow">Our Solutions</h2>
 
-<div class="grid md:grid-cols-3 gap-10 pb-16">
+    <div class="grid md:grid-cols-3 gap-10">
 
-    <div class="solution-card wow">
+      <div class="solution-card wow">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover">
+          <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover">
         </div>
         <h3 class="mt-6">Get paid across mobile money, bank and cards</h3>
         <p class="solution-tag mt-2 uppercase">COLLECTION SERVICE</p>
         <p class="desc mt-3">One integration. Multiple rails. Faster confirmations, fewer failures, cleaner books.</p>
-       <button onclick="window.location.href='collection'" 
-        class="elementor-btn elementor-btn-primary mt-6">
-  LEARN MORE
-</button>
-    </div>
+        <button onclick="window.location.href='collection'"
+          class="elementor-btn elementor-btn-primary mt-6">
+          LEARN MORE
+        </button>
+      </div>
 
-    <div class="solution-card wow wow-delay-200">
+      <div class="solution-card wow wow-delay-200">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover">
+          <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover">
         </div>
         <h3 class="mt-6">Enterprise grade payouts, simplified</h3>
         <p class="solution-tag mt-2 uppercase">PAYOUT SERVICE</p>
         <p class="desc mt-3">Move money out reliably wallets, banks, and (where enabled) card-to-card backed by webhooks and reconciliation tools.</p>
-       <button onclick="window.location.href='payout'" 
-        class="elementor-btn elementor-btn-primary mt-6">
-  LEARN MORE
-</button>
-    </div>
+        <button onclick="window.location.href='payout'"
+          class="elementor-btn elementor-btn-primary mt-6">
+          LEARN MORE
+        </button>
+      </div>
 
-    <div class="solution-card wow wow-delay-400">
+      <div class="solution-card wow wow-delay-400">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover">
+          <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover">
         </div>
         <h3 class="mt-6">Card acceptance that fits your business</h3>
         <p class="solution-tag mt-2 uppercase">CARD PAYMENT SERVICE</p>
-        <p class="desc mt-3">From online checkout to secure card-on-file using card that fit your business and needs.</p>
-       <button onclick="window.location.href='card'" 
-        class="elementor-btn elementor-btn-primary mt-6">
-  LEARN MORE
-</button>
+        <p class="desc mt-3">From online checkout to secure card on file using card that fit your business and needs.</p>
+        <button onclick="window.location.href='card'"
+          class="elementor-btn elementor-btn-primary mt-6">
+          LEARN MORE
+        </button>
+      </div>
+
     </div>
+  </div>
+</section>
+<style>
+    .faq-section {
+        max-width: 1300px; /* slightly increased width */
+        width: 95%; /* helps it expand nicely on larger screens */
+        margin: 0 auto;
+        padding: 60px 20px;
+    }
 
-</div>
-</div>
-
+    .faq-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+</style>
 <!-- FAQ -->
 <section id="faq" class="faq-section wow">
 
     <div class="faq-header">
         <h2 class="section-heading">Frequently Asked Questions About EVPay</h2>
-        <p>Here are the most common questions about EVPay Tanzania — how it works, payments, EV charging, and more.</p>
+        <p>Here are the most common questions about EVPay Tanzania  how it works, payments, EV charging, and more.</p>
     </div>
 
     <div class="faq-content">
@@ -791,7 +822,7 @@
     </div>
 </section>
 <!-- Regulated & Certified -->
-<section class="bg-white py-20 overflow-hidden">
+<section class="bg-white py-10 overflow-hidden">
   <div class="max-w-7xl mx-auto px-10 text-center">
     <h2 class="section-heading text-4xl mb-16 wow">
       Regulated and Certified By

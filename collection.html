@@ -294,8 +294,8 @@
     .faq-section {
         background: #ffffff;
         max-width: 1152px;
-        margin: 60px auto;
-        padding: 60px 24px;
+        margin: 0 auto;
+        padding: 40px 24px;
     }
 
     .faq-header { text-align: center; margin-bottom: 50px; }
@@ -420,7 +420,7 @@
     }
 
     /* ===== FOOTER ===== */
-    .site-footer { background: #ffffff; padding: 80px 0 30px; }
+    .site-footer { background: #ffffff; padding: 40px 0 30px; }
 
     .footer-heading {
         font-family: "Hanken Grotesk", sans-serif;
@@ -527,17 +527,21 @@
             <a href="https://evmak.com/contact-us/">REACH US</a>
         </div>
 
-        <div class="flex items-center gap-4">
-            <button class="lets-talk-btn hidden md:block">API DOCS</button>
-            <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+         <div class="flex items-center gap-4">
+    <a href="http://localhost:3000/introduction" target="_blank"
+       class="lets-talk-btn hidden md:block">
+        API DOCS
+    </a>
+
+    <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="px-6 mt-4">
+<section class="px-6 md:px-16 pt-4 pb-10">
   <div class="relative max-w-7xl mx-auto rounded-2xl overflow-hidden min-h-[600px] flex items-center">
     <img src="./assets/img/EvPay UI 2.png" alt="Collection Service Hero"
          class="absolute inset-0 w-full h-full object-cover">
@@ -556,13 +560,13 @@
 
       <p class="mt-8 text-lg md:text-xl hero-subtext">
         One integration. Multiple rails. Faster confirmations, fewer failures, cleaner books.
-        Accept payments from any channel your customers prefer — all in one place.
+        Accept payments from any channel your customers prefer  all in one place.
       </p>
     </div>
   </div>
 </section>
 <!-- Why Choose Our Collection Service (Updated to match benefits) -->
-<section class="w-full bg-white py-20 px-6 md:px-16">
+<!-- <section class="w-full bg-white py-10 px-6 md:px-16">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
     <div class="flex justify-center lg:justify-start wow-left wow">
@@ -577,7 +581,7 @@
 
       <p class="mt-5 section-subheading">
         Our Collection Service is designed to simplify payments, improve customer experience,
-        and give your business full control over transactions — all from one powerful platform.
+        and give your business full control over transactions  all from one powerful platform.
       </p>
 
       <ul class="mt-6 space-y-3 body-list">
@@ -605,130 +609,125 @@
       </div>
     </div>
   </div>
-</section>
-
-<div class="max-w-7xl mx-auto px-8">
-
+</section> -->
 
 <!-- Common Use Cases (6-card grid using evpay's 'Our Solutions' card pattern) -->
-<h2 class="text-center section-heading text-4xl mb-6 wow">Common Use Cases</h2>
-<p class="text-center section-subheading max-w-2xl mx-auto mb-16 wow wow-delay-200">
-  From retail to subscriptions, EvPay Collection Service powers how Tanzania's businesses get paid.
-</p>
+<section class="w-full bg-white py-10 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-center section-heading text-4xl mb-6 wow">Common Use Cases</h2>
+    <p class="text-center section-subheading max-w-2xl mx-auto mb-16 wow wow-delay-200">
+      From retail to subscriptions, EvPay Collection Service powers how Tanzania's businesses get paid.
+    </p>
 
-<div class="grid md:grid-cols-3 gap-10 pb-16">
+    <div class="grid md:grid-cols-3 gap-10 mb-10">
 
-    <div class="use-case-card wow">
+      <div class="use-case-card wow">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover" alt="Retail">
+          <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover" alt="Retail">
         </div>
         <h3 class="mt-6">Retail &amp; Services</h3>
         <p class="use-case-tag mt-2 uppercase">IN-STORE &amp; ONLINE</p>
         <p class="desc mt-3">Accept payments from customers for products, services, and online orders. Automate collections and track transactions in real-time.</p>
-       
-    </div>
+      </div>
 
-    <div class="use-case-card wow wow-delay-200">
+      <div class="use-case-card wow wow-delay-200">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover" alt="Events">
+          <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover" alt="Events">
         </div>
         <h3 class="mt-6">Events &amp; Ticketing</h3>
         <p class="use-case-tag mt-2 uppercase">TICKETS &amp; REGISTRATIONS</p>
         <p class="desc mt-3">Collect ticket fees, registrations, and entry payments for events, conferences, and entertainment venues easily.</p>
-       
-    </div>
+      </div>
 
-    <div class="use-case-card wow wow-delay-400">
+      <div class="use-case-card wow wow-delay-400">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover" alt="Subscriptions">
+          <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover" alt="Subscriptions">
         </div>
         <h3 class="mt-6">Subscriptions &amp; Donations</h3>
         <p class="use-case-tag mt-2 uppercase">RECURRING PAYMENTS</p>
         <p class="desc mt-3">Manage recurring subscriptions and donations. Enable recurring billing for your services or non-profit contributions.</p>
-       
+      </div>
+
     </div>
 
-</div>
+    <div class="grid md:grid-cols-3 gap-10">
 
-<div class="grid md:grid-cols-3 gap-10 pb-16">
-
-    <div class="use-case-card wow">
+      <div class="use-case-card wow">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/EvPay UI 2.png" class="w-full h-[280px] object-cover" alt="Utilities">
+          <img src="./assets/img/EvPay UI 2.png" class="w-full h-[280px] object-cover" alt="Utilities">
         </div>
         <h3 class="mt-6">Utilities &amp; School Fees</h3>
         <p class="use-case-tag mt-2 uppercase">RECURRING BILLS</p>
-        <p class="desc mt-3">Automate collections for utilities, school fees, and other recurring payments — reducing manual effort and late payments.</p>
-       
-    </div>
+        <p class="desc mt-3">Automate collections for utilities, school fees, and other recurring payments reducing manual effort and late payments.</p>
+      </div>
 
-    <div class="use-case-card wow wow-delay-200">
+      <div class="use-case-card wow wow-delay-200">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/about-img.jpg" class="w-full h-[280px] object-cover" alt="B2B Invoices">
+          <img src="./assets/img/about-img.jpg" class="w-full h-[280px] object-cover" alt="B2B Invoices">
         </div>
         <h3 class="mt-6">B2B Invoices &amp; Retainers</h3>
         <p class="use-case-tag mt-2 uppercase">BUSINESS PAYMENTS</p>
         <p class="desc mt-3">Send invoices, collect payments, and manage retainers for business-to-business transactions and professional services.</p>
-       
-    </div>
+      </div>
 
-    <div class="use-case-card wow wow-delay-400">
+      <div class="use-case-card wow wow-delay-400">
         <div class="overflow-hidden rounded-md">
-            <img src="./assets/img/hero.png" class="w-full h-[280px] object-cover" alt="E-commerce">
+          <img src="./assets/img/hero.png" class="w-full h-[280px] object-cover" alt="E-commerce">
         </div>
         <h3 class="mt-6">E-commerce Checkout</h3>
         <p class="use-case-tag mt-2 uppercase">ONLINE STORES</p>
         <p class="desc mt-3">Embed hosted checkout into your online store. Support cards, mobile money, and bank transfers with a single code snippet.</p>
-       
-    </div>
-
-</div>
-
-<!-- What You Get -->
-<section class="py-20">
-  <div class="text-center max-w-2xl mx-auto mb-16 wow">
-    <h2 class="section-heading text-3xl md:text-4xl mb-4">What You Get</h2>
-    <p class="section-subheading">Everything your team needs to collect payments reliably and scale with confidence.</p>
-  </div>
-
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-14">
-
-    <div class="feature-item wow">
-      <div class="feature-icon"><i class="fas fa-link"></i></div>
-      <div>
-        <h3 class="feature-title">Payment Links</h3>
-        <p class="feature-desc">Create a link in seconds and share via SMS or WhatsApp. No code. Great for invoices, deposits, and one-off orders.</p>
       </div>
-    </div>
 
-    <div class="feature-item wow wow-delay-200">
-      <div class="feature-icon"><i class="fas fa-cart-shopping"></i></div>
-      <div>
-        <h3 class="feature-title">Hosted Checkout</h3>
-        <p class="feature-desc">A brandable page that supports mobile money, bank, and cards. Save details for returning customers where allowed.</p>
-      </div>
     </div>
-
-    <div class="feature-item wow">
-      <div class="feature-icon"><i class="fas fa-bell"></i></div>
-      <div>
-        <h3 class="feature-title">Webhooks &amp; Status</h3>
-        <p class="feature-desc">Real-time events for success, pending, failure, and settlement. Clear error codes. Idempotent retries.</p>
-      </div>
-    </div>
-
-    <div class="feature-item wow wow-delay-200">
-      <div class="feature-icon"><i class="fas fa-rotate"></i></div>
-      <div>
-        <h3 class="feature-title">Reconciliation Tools</h3>
-        <p class="feature-desc">Match payments to orders automatically. Export CSV/PDF. Push to your ERP or accounting tool.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-</div>
+<!-- What You Get -->
+<section class="w-full bg-white py-10 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16 wow">
+      <h2 class="section-heading text-3xl md:text-4xl mb-4">What You Get</h2>
+      <p class="section-subheading">Everything your team needs to collect payments reliably and scale with confidence.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-14">
+
+      <div class="feature-item wow">
+        <div class="feature-icon"><i class="fas fa-link"></i></div>
+        <div>
+          <h3 class="feature-title">Payment Links</h3>
+          <p class="feature-desc">Create a link in seconds and share via SMS or WhatsApp. No code. Great for invoices, deposits, and one-off orders.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow wow-delay-200">
+        <div class="feature-icon"><i class="fas fa-cart-shopping"></i></div>
+        <div>
+          <h3 class="feature-title">Hosted Checkout</h3>
+          <p class="feature-desc">A brandable page that supports mobile money, bank, and cards. Save details for returning customers where allowed.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow">
+        <div class="feature-icon"><i class="fas fa-bell"></i></div>
+        <div>
+          <h3 class="feature-title">Webhooks &amp; Status</h3>
+          <p class="feature-desc">Real-time events for success, pending, failure, and settlement. Clear error codes. Idempotent retries.</p>
+        </div>
+      </div>
+
+      <div class="feature-item wow wow-delay-200">
+        <div class="feature-icon"><i class="fas fa-rotate"></i></div>
+        <div>
+          <h3 class="feature-title">Reconciliation Tools</h3>
+          <p class="feature-desc">Match payments to orders automatically. Export CSV/PDF. Push to your ERP or accounting tool.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="site-footer">
