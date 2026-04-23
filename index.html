@@ -592,7 +592,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-    <a href="http://localhost:3000/introduction" target="_blank"
+    <a href="https://docs.evpay.co.tz/introduction" target="_blank"
        class="lets-talk-btn hidden md:block">
         API DOCS
     </a>
@@ -685,7 +685,7 @@
       </div>
        <!-- Button -->
    <div class="mt-6">
-  <a href="http://localhost:3000/introduction" target="_blank"
+  <a href="https://docs.evpay.co.tz/introduction" target="_blank"
      class="inline-block px-8 py-3 bg-blue-600 hover:bg-black-700 text-white rounded-full text-sm font-semibold transition duration-300 shadow-md">
     Explore More
   </a>
@@ -715,54 +715,104 @@
     </div>
   </div>
 </section>
-
 <!-- Our Solutions -->
-<section class="w-full bg-white py-10 px-6 md:px-16">
+<section class="w-full bg-white py-16 px-6 md:px-16">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-center section-heading text-4xl mb-16 wow">Our Solutions</h2>
 
-    <div class="grid md:grid-cols-3 gap-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 wow">
+      <h2 class="section-heading text-4xl md:text-5xl mb-5">Our Solutions</h2>
+      <p class="section-subheading">
+        One platform, three powerful products. Collect, pay out, and accept cards
+        through a single integration built for Tanzania's businesses.
+      </p>
+    </div>
 
+    <!-- Three Solution Cards -->
+    <div class="grid md:grid-cols-3 gap-10 mb-20">
+
+      <!-- Collection Service -->
       <div class="solution-card wow">
         <div class="overflow-hidden rounded-md">
-          <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover">
+          <img src="./assets/img/EvPay UI 3.png" class="w-full h-[280px] object-cover" alt="Collection Service">
         </div>
-        <h3 class="mt-6">Get paid across mobile money, bank and cards</h3>
-        <p class="solution-tag mt-2 uppercase">COLLECTION SERVICE</p>
-        <p class="desc mt-3">One integration. Multiple rails. Faster confirmations, fewer failures, cleaner books.</p>
-        <button onclick="window.location.href='collection'"
-          class="elementor-btn elementor-btn-primary mt-6">
-          LEARN MORE
-        </button>
+        <p class="solution-tag mt-5 uppercase">COLLECTION SERVICE</p>
+        <h3 class="mt-2">Get paid across mobile money, bank and cards</h3>
+        <p class="desc mt-3">
+          One integration to accept payments across every channel  perfect for retail, e-commerce,
+          subscriptions, events, and recurring bills. Comes with payment links, hosted checkout,
+          webhooks, and built-in reconciliation.
+        </p>
       </div>
 
+      <!-- Payout Service -->
       <div class="solution-card wow wow-delay-200">
         <div class="overflow-hidden rounded-md">
-          <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover">
+          <img src="./assets/img/EvPay UI 1.png" class="w-full h-[280px] object-cover" alt="Payout Service">
         </div>
-        <h3 class="mt-6">Enterprise grade payouts, simplified</h3>
-        <p class="solution-tag mt-2 uppercase">PAYOUT SERVICE</p>
-        <p class="desc mt-3">Move money out reliably wallets, banks, and (where enabled) card-to-card backed by webhooks and reconciliation tools.</p>
-        <button onclick="window.location.href='payout'"
-          class="elementor-btn elementor-btn-primary mt-6">
-          LEARN MORE
-        </button>
+        <p class="solution-tag mt-5 uppercase">PAYOUT SERVICE</p>
+        <h3 class="mt-2">Enterprise grade payouts, simplified</h3>
+        <p class="desc mt-3">
+          Send money to wallets and banks reliably at any scale  ideal for marketplaces, gig platforms,
+          NGOs, payroll, and vendor payments. Includes multi-rail routing, retries, and settlement
+          views that replace spreadsheets.
+        </p>
       </div>
 
+      <!-- Card Payment Service -->
       <div class="solution-card wow wow-delay-400">
         <div class="overflow-hidden rounded-md">
-          <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover">
+          <img src="./assets/img/Evpay Hero Animation.gif" class="w-full h-[280px] object-cover" alt="Card Payment Service">
         </div>
-        <h3 class="mt-6">Card acceptance that fits your business</h3>
-        <p class="solution-tag mt-2 uppercase">CARD PAYMENT SERVICE</p>
-        <p class="desc mt-3">From online checkout to secure card on file using card that fit your business and needs.</p>
-        <button onclick="window.location.href='card'"
-          class="elementor-btn elementor-btn-primary mt-6">
-          LEARN MORE
-        </button>
+        <p class="solution-tag mt-5 uppercase">CARD PAYMENT SERVICE</p>
+        <h3 class="mt-2">Card acceptance that fits your business</h3>
+        <p class="desc mt-3">
+          Accept Visa, Mastercard, and local cards with a secure, PCI-compliant checkout. Supports
+          tokenization, card-on-file, 3-D Secure, and risk tools  all unified with your mobile
+          money and bank flows.
+        </p>
       </div>
 
     </div>
+
+    <!-- Cross-Product Benefits Strip -->
+    <div class="wow">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h3 class="section-heading text-2xl md:text-3xl mb-3">One Platform. Every Advantage.</h3>
+        <p class="section-subheading">
+          Every product shares the same API, dashboard, and compliance foundation  so your team ships faster.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+        <div class="text-center">
+          <div class="feature-icon mx-auto mb-4"><i class="fas fa-code"></i></div>
+          <h4 class="feature-title text-base">One API, One Dashboard</h4>
+          <p class="feature-desc text-sm mt-2">Unified across collection, payout, and cards.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="feature-icon mx-auto mb-4"><i class="fas fa-bell"></i></div>
+          <h4 class="feature-title text-base">Webhooks &amp; Idempotency</h4>
+          <p class="feature-desc text-sm mt-2">Clean retries and guaranteed consistency.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="feature-icon mx-auto mb-4"><i class="fas fa-shield-halved"></i></div>
+          <h4 class="feature-title text-base">Compliance by Design</h4>
+          <p class="feature-desc text-sm mt-2">PSP-licensed with data hosted locally.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="feature-icon mx-auto mb-4"><i class="fas fa-rotate"></i></div>
+          <h4 class="feature-title text-base">Finance-Ready Reporting</h4>
+          <p class="feature-desc text-sm mt-2">Settlements, exports, and audit logs.</p>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 <style>
