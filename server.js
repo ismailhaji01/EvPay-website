@@ -13,7 +13,7 @@ const distPath = path.join(__dirname, 'dist')
 /**
  * Serve static files
  */
-app.use(express.static(distPath))
+app.use(express.static(distPath, { extensions: ['html'] }))
 
 /**
  * SAFE FALLBACK ROUTE (NO path-to-regexp issues)
